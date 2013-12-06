@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybcs.bcs</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;pybcs ::
+        Module&nbsp;bcs
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybcs.bcs-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pybcs.bcs-module.html">Module pybcs.bcs</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#coding:utf8</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">urllib</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt><tt class="py-op">,</tt> <tt class="py-name">sys</tt><tt class="py-op">,</tt> <tt class="py-name">os</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">time</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">hmac</tt><tt class="py-op">,</tt> <tt class="py-name">base64</tt><tt class="py-op">,</tt> <tt class="py-name">hashlib</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line">    <tt class="py-keyword">import</tt> <tt class="py-name">json</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line">    <tt class="py-keyword">import</tt> <tt class="py-name">simplejson</tt> <tt class="py-keyword">as</tt> <tt class="py-name">json</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">common</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Method pybcs.bcs.BCS.bucket()=pybcs.bcs.BCS-class.html#bucket,Module pybcs.bucket=pybcs.bucket-module.html"><a title="pybcs.bcs.BCS.bucket
+pybcs.bucket" class="py-name" href="#" onclick="return doclink('link-0', 'bucket', 'link-0');">bucket</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class pybcs.bucket.Bucket=pybcs.bucket.Bucket-class.html"><a title="pybcs.bucket.Bucket" class="py-name" href="#" onclick="return doclink('link-1', 'Bucket', 'link-1');">Bucket</a></tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Module pybcs.httpc=pybcs.httpc-module.html"><a title="pybcs.httpc" class="py-name" href="#" onclick="return doclink('link-2', 'httpc', 'link-2');">httpc</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="BCS"></a><div id="BCS-def"><a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt> <a class="py-toggle" href="#" id="BCS-toggle" onclick="return toggle('BCS');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pybcs.bcs.BCS-class.html">BCS</a><tt class="py-op">:</tt> </tt>
+</div><div id="BCS-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="BCS-expanded"><a name="BCS.__init__"></a><div id="BCS.__init__-def"><a name="L20"></a><tt class="py-lineno"> 20</tt> <a class="py-toggle" href="#" id="BCS.__init__-toggle" onclick="return toggle('BCS.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybcs.bcs.BCS-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">host</tt><tt class="py-op">,</tt> <tt class="py-param">ak</tt> <tt class="py-op">,</tt> <tt class="py-param">sk</tt><tt class="py-op">,</tt> <tt class="py-param">httpclient_class</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BCS.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BCS.__init__-expanded"><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">            <tt class="py-keyword">from</tt> <tt class="py-name">bae</tt><tt class="py-op">.</tt><tt class="py-name">core</tt> <tt class="py-keyword">import</tt> <tt class="py-name">const</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">host</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">host</tt> <tt class="py-keyword">if</tt> <tt class="py-name">host</tt> <tt class="py-keyword">else</tt> <tt class="py-name">const</tt><tt class="py-op">.</tt><tt class="py-name">BCS_ADDR</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ak</tt>   <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">ak</tt> <tt class="py-keyword">if</tt> <tt class="py-name">ak</tt> <tt class="py-keyword">else</tt> <tt class="py-name">const</tt><tt class="py-op">.</tt><tt class="py-name">ACCESS_KEY</tt><tt class="py-op">)</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">sk</tt>   <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">sk</tt> <tt class="py-keyword">if</tt> <tt class="py-name">sk</tt> <tt class="py-keyword">else</tt> <tt class="py-name">const</tt><tt class="py-op">.</tt><tt class="py-name">SECRET_KEY</tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">httpclient_class</tt> <tt class="py-op">=</tt> <tt id="link-3" class="py-name" targets="Class pybcs.httpc.HttplibHTTPC=pybcs.httpc.HttplibHTTPC-class.html"><a title="pybcs.httpc.HttplibHTTPC" class="py-name" href="#" onclick="return doclink('link-3', 'HttplibHTTPC', 'link-3');">HttplibHTTPC</a></tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">host</tt> <tt class="py-op">=</tt> <tt class="py-name">host</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ak</tt> <tt class="py-op">=</tt> <tt class="py-name">ak</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">sk</tt> <tt class="py-op">=</tt> <tt class="py-name">sk</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">httpclient_class</tt> <tt class="py-op">=</tt> <tt class="py-name">httpclient_class</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">httpclient_class</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">httpclient_class</tt> <tt class="py-op">=</tt> <tt id="link-4" class="py-name" targets="Function pybcs.httpc.select_best_httpc()=pybcs.httpc-module.html#select_best_httpc"><a title="pybcs.httpc.select_best_httpc" class="py-name" href="#" onclick="return doclink('link-4', 'select_best_httpc', 'link-4');">select_best_httpc</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">host</tt><tt class="py-op">.</tt><tt class="py-name">endswith</tt><tt class="py-op">(</tt><tt class="py-string">'/'</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">host</tt> <tt class="py-op">=</tt> <tt class="py-name">host</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">host</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">'http'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">host</tt> <tt class="py-op">=</tt> <tt class="py-string">"http://"</tt> <tt class="py-op">+</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">host</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">         </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">httpclient_class</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">get_url</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method pybcs.bcs.BCS.sign()=pybcs.bcs.BCS-class.html#sign"><a title="pybcs.bcs.BCS.sign" class="py-name" href="#" onclick="return doclink('link-5', 'sign', 'link-5');">sign</a></tt><tt class="py-op">(</tt><tt class="py-string">'GET'</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-string">'/'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">network</tt> </tt>
+<a name="BCS.list_buckets"></a><div id="BCS.list_buckets-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="BCS.list_buckets-toggle" onclick="return toggle('BCS.list_buckets');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybcs.bcs.BCS-class.html#list_buckets">list_buckets</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BCS.list_buckets-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BCS.list_buckets-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">        &#21015;&#20030;&#25152;&#26377;&#30340;buckets</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-name">rst</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">c</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method pybcs.httpc.HTTPC.get()=pybcs.httpc.HTTPC-class.html#get,Method pybcs.httpc.HttplibHTTPC.get()=pybcs.httpc.HttplibHTTPC-class.html#get,Method pybcs.httpc.PyCurlHTTPC.get()=pybcs.httpc.PyCurlHTTPC-class.html#get,Method pybcs.object.Object.get()=pybcs.object.Object-class.html#get"><a title="pybcs.httpc.HTTPC.get
+pybcs.httpc.HttplibHTTPC.get
+pybcs.httpc.PyCurlHTTPC.get
+pybcs.object.Object.get" class="py-name" href="#" onclick="return doclink('link-6', 'get', 'link-6');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">get_url</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-name">text</tt> <tt class="py-op">=</tt> <tt class="py-name">rst</tt><tt class="py-op">[</tt><tt class="py-string">'body'</tt><tt class="py-op">]</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">j</tt> <tt class="py-op">=</tt> <tt class="py-name">json</tt><tt class="py-op">.</tt><tt class="py-name">loads</tt><tt class="py-op">(</tt><tt class="py-name">text</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="pybcs.bcs.BCS.bucket
+pybcs.bucket" class="py-name" href="#" onclick="return doclink('link-7', 'bucket', 'link-0');">bucket</a></tt><tt class="py-op">(</tt><tt class="py-name">b</tt><tt class="py-op">[</tt><tt class="py-string">'bucket_name'</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">encode</tt><tt class="py-op">(</tt><tt class="py-string">'utf8'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">b</tt> <tt class="py-keyword">in</tt> <tt class="py-name">j</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="BCS.bucket"></a><div id="BCS.bucket-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="BCS.bucket-toggle" onclick="return toggle('BCS.bucket');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybcs.bcs.BCS-class.html#bucket">bucket</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">bucket_name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BCS.bucket-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BCS.bucket-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">        &#26500;&#36896;bucket&#23545;&#35937;</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">        &#21442;&#25968;&#65306;</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">            bucket_name:  bucket&#21517;&#31216;</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">b</tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="pybcs.bucket.Bucket" class="py-name" href="#" onclick="return doclink('link-8', 'Bucket', 'link-1');">Bucket</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">bucket_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">b</tt> </tt>
+</div><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-comment">#M(&#24517;&#36873;): request method. eg: PUT,GET,POST,DELETE,HEAD</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-comment">#B(&#24517;&#36873;): bucketname</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">    <tt class="py-comment">#O(&#24517;&#36873;): objectname</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">    <tt class="py-comment">#T(&#21487;&#36873;): &#35775;&#38382;&#26102;&#38388;&#33539;&#22260;</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">    <tt class="py-comment">#I(&#21487;&#36873;):  &#35775;&#38382;ip&#38480;&#21046;</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-comment">#S(&#21487;&#36873;): &#25805;&#20316;object&#22823;&#23567;&#38480;&#21046;</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">    <tt class="py-comment">#NOTICE: &#35831;&#20445;&#35777;&#36755;&#20837;&#32479;&#19968;&#65292;&#27604;&#22914;B,O&#37117;&#24212;&#35813;&#21516;&#20026;unicode&#25110;&#21516;&#20026;utf8</tt> </tt>
+<a name="BCS.sign"></a><div id="BCS.sign-def"><a name="L69"></a><tt class="py-lineno"> 69</tt> <a class="py-toggle" href="#" id="BCS.sign-toggle" onclick="return toggle('BCS.sign');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybcs.bcs.BCS-class.html#sign">sign</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">M</tt><tt class="py-op">,</tt> <tt class="py-param">B</tt><tt class="py-op">,</tt> <tt class="py-param">O</tt><tt class="py-op">,</tt> <tt class="py-param">T</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">I</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">S</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BCS.sign-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BCS.sign-expanded"><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring">        &#35745;&#31639;&#31614;&#21517;&#65292;&#20165;&#20379;&#20869;&#37096;&#20351;&#29992;</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-docstring">        &#21442;&#25968;&#65306;</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-docstring">            M: HTTP&#26041;&#27861;</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-docstring">            B: bucket name</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-docstring">            O: object name</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">            T: time</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring">            I: IP</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">            S: size</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-name">flag</tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-name">s</tt> <tt class="py-op">=</tt>  <tt class="py-string">''</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-name">flag</tt><tt class="py-op">+=</tt><tt class="py-string">'M'</tt><tt class="py-op">;</tt> <tt class="py-name">s</tt> <tt class="py-op">+=</tt> <tt class="py-string">'Method=%s\n'</tt> <tt class="py-op">%</tt> <tt class="py-name">M</tt><tt class="py-op">;</tt>  </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-name">flag</tt><tt class="py-op">+=</tt><tt class="py-string">'B'</tt><tt class="py-op">;</tt> <tt class="py-name">s</tt> <tt class="py-op">+=</tt> <tt class="py-string">'Bucket=%s\n'</tt> <tt class="py-op">%</tt> <tt class="py-name">B</tt><tt class="py-op">;</tt>  </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">        <tt class="py-name">flag</tt><tt class="py-op">+=</tt><tt class="py-string">'O'</tt><tt class="py-op">;</tt> <tt class="py-name">s</tt> <tt class="py-op">+=</tt> <tt class="py-string">'Object=%s\n'</tt> <tt class="py-op">%</tt> <tt class="py-name">O</tt><tt class="py-op">;</tt>  </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">T</tt> <tt class="py-op">:</tt>   <tt class="py-name">flag</tt><tt class="py-op">+=</tt><tt class="py-string">'T'</tt><tt class="py-op">;</tt> <tt class="py-name">s</tt> <tt class="py-op">+=</tt> <tt class="py-string">'Time=%s\n'</tt>   <tt class="py-op">%</tt> <tt class="py-name">T</tt><tt class="py-op">;</tt>  </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">I</tt> <tt class="py-op">:</tt>   <tt class="py-name">flag</tt><tt class="py-op">+=</tt><tt class="py-string">'I'</tt><tt class="py-op">;</tt> <tt class="py-name">s</tt> <tt class="py-op">+=</tt> <tt class="py-string">'Ip=%s\n'</tt>     <tt class="py-op">%</tt> <tt class="py-name">I</tt><tt class="py-op">;</tt>  </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">S</tt> <tt class="py-op">:</tt>   <tt class="py-name">flag</tt><tt class="py-op">+=</tt><tt class="py-string">'S'</tt><tt class="py-op">;</tt> <tt class="py-name">s</tt> <tt class="py-op">+=</tt> <tt class="py-string">'Size=%s\n'</tt>   <tt class="py-op">%</tt> <tt class="py-name">S</tt><tt class="py-op">;</tt>  </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">s</tt> <tt class="py-op">=</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">flag</tt><tt class="py-op">,</tt> <tt class="py-name">s</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">         </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-keyword">def</tt> <tt class="py-def-name">h</tt><tt class="py-op">(</tt><tt class="py-param">sk</tt><tt class="py-op">,</tt> <tt class="py-param">body</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">            <tt class="py-name">digest</tt> <tt class="py-op">=</tt> <tt class="py-name">hmac</tt><tt class="py-op">.</tt><tt class="py-name">new</tt><tt class="py-op">(</tt><tt class="py-name">sk</tt><tt class="py-op">,</tt> <tt class="py-name">body</tt><tt class="py-op">,</tt> <tt class="py-name">hashlib</tt><tt class="py-op">.</tt><tt class="py-name">sha1</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">digest</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">            <tt class="py-name">t</tt> <tt class="py-op">=</tt> <tt class="py-name">base64</tt><tt class="py-op">.</tt><tt class="py-name">encodestring</tt><tt class="py-op">(</tt><tt class="py-name">digest</tt><tt class="py-op">)</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt class="py-name">t</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt id="link-9" class="py-name"><a title="pybcs.bcs.BCS.sign" class="py-name" href="#" onclick="return doclink('link-9', 'sign', 'link-5');">sign</a></tt> <tt class="py-op">=</tt> <tt class="py-name">h</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">sk</tt><tt class="py-op">,</tt> <tt class="py-name">s</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-name">url</tt> <tt class="py-op">=</tt> <tt class="py-string">'%s/%s%s?sign=%s:%s:%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">host</tt><tt class="py-op">,</tt> <tt class="py-name">B</tt><tt class="py-op">,</tt> <tt class="py-string">'/'</tt> <tt class="py-op">+</tt> <tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt class="py-name">O</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>  </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                <tt class="py-name">flag</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ak</tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name"><a title="pybcs.bcs.BCS.sign" class="py-name" href="#" onclick="return doclink('link-10', 'sign', 'link-5');">sign</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">T</tt> <tt class="py-op">:</tt>      <tt class="py-name">url</tt> <tt class="py-op">+=</tt> <tt class="py-string">'&amp;time=%s'</tt>   <tt class="py-op">%</tt> <tt class="py-name">T</tt><tt class="py-op">;</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">I</tt> <tt class="py-op">:</tt>      <tt class="py-name">url</tt> <tt class="py-op">+=</tt> <tt class="py-string">'&amp;ip=%s'</tt>     <tt class="py-op">%</tt> <tt class="py-name">I</tt><tt class="py-op">;</tt>  </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">S</tt> <tt class="py-op">:</tt>      <tt class="py-name">url</tt> <tt class="py-op">+=</tt> <tt class="py-string">'&amp;size=%s'</tt>   <tt class="py-op">%</tt> <tt class="py-name">S</tt><tt class="py-op">;</tt>  </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">url</tt> </tt>
+</div></div><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Nov 20 17:38:27 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
