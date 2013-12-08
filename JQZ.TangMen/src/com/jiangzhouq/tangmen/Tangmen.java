@@ -3,10 +3,12 @@ package com.jiangzhouq.tangmen;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.baidu.frontia.Frontia;
 import com.baidu.frontia.FrontiaFile;
@@ -15,6 +17,9 @@ import com.baidu.frontia.api.FrontiaStorageListener.FileListListener;
 import com.baidu.frontia.api.FrontiaStorageListener.FileProgressListener;
 import com.baidu.frontia.api.FrontiaStorageListener.FileTransferListener;
 import com.jiangzhouq.tangmen.data.Constants;
+import com.suredigit.inappfeedback.FeedbackDialog;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.fb.FeedbackAgent;
 
 public class Tangmen extends FragmentActivity {
 	private static final boolean LOG_SWITCH = Constants.LOG_SWITCH;
@@ -27,22 +32,47 @@ public class Tangmen extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tangmen);
-		boolean isInit = Frontia.init(getApplicationContext(),
-				"7q6l1grGD7pYFoDG3pEKTxwE");
-		if (isInit) {
-			if (LOG_SWITCH)
-				Log.d(LOG_TAG, "Frontia init successfully!");
-		}
-		mCloudStorage = Frontia.getStorage();
-		list();
+//		boolean isInit = Frontia.init(getApplicationContext(),
+//				"7q6l1grGD7pYFoDG3pEKTxwE");
+//		if (isInit) {
+//			if (LOG_SWITCH)
+//				Log.d(LOG_TAG, "Frontia init successfully!");
+//		}
+//		mCloudStorage = Frontia.getStorage();
+//		list();
 	}
-
+	@Override
+	protected void onResume() {
+		MobclickAgent.onResume(this);
+		MobclickAgent.setDebugMode(true);
+		super.onResume();
+	}
+	
+	@Override
+	protected void onPause() {
+		MobclickAgent.onPause(this);
+		super.onPause();
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.tangmen, menu);
 		return true;
 	}
-
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()){
+			case R.id.action_settings:
+				FeedbackDialog feedBackDialog = new FeedbackDialog(this, "AF-8565EE971698-9C");
+				feedBackDialog.show();
+				break;
+			case R.id.action_feedback:
+				FeedbackAgent agent = new FeedbackAgent(Tangmen.this);
+				agent.startFeedbackActivity();
+				
+				break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 	protected void list() {
 		mCloudStorage.listFiles(new FileListListener() {
 			@Override

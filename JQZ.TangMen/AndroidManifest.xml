@@ -23,6 +23,9 @@
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<!--Baidu frnotia permission end-->
+	<!-- umeng permission start -->
+	
+	<!-- umeng permission end -->
     <application
         android:name="com.baidu.frontia.FrontiaApplication"
         android:allowBackup="true"
@@ -38,6 +41,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.umeng.fb.ConversationActivity"/>
+        <activity android:name="com.umeng.fb.ContactActivity"/>
         <!-- Baidu receivers start-->
         <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
                   android:process=":bdservice_v1">
@@ -91,6 +96,7 @@
             </intent-filter>
         </receiver> 
         <!-- extends frontiapushmessagereceiver end-->
+        <meta-data android:value="52a1f4eb56240b664606ff01" android:name="UMENG_APPKEY"></meta-data>
     </application>
 
 </manifest>
