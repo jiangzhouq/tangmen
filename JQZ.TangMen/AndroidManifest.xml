@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jiangzhouq.tangmen"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="6"
+    android:versionName="1.6" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -37,12 +37,25 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.umeng.fb.ConversationActivity"/>
-        <activity android:name="com.umeng.fb.ContactActivity"/>
+        <activity
+            android:name="com.jiangzhouq.tangmen.FeedbackActivity"
+            android:label="@string/feedback" >
+            <intent-filter>
+                <action android:name="android.intent.action.FeedbackActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jiangzhouq.tangmen.FBContactActivity"
+            android:label="@string/feedback" >
+            <intent-filter>
+                <action android:name="android.intent.action.FBContactActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <!-- Baidu receivers start-->
         <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
                   android:process=":bdservice_v1">
@@ -96,6 +109,12 @@
             </intent-filter>
         </receiver> 
         <!-- extends frontiapushmessagereceiver end-->
+        <!-- umeng -->
+        <service
+		    android:name="com.umeng.common.net.DownloadingService"
+		    android:process=":DownloadingService" >
+		</service>
+        <!-- umeng -->
         <meta-data android:value="52a1f4eb56240b664606ff01" android:name="UMENG_APPKEY"></meta-data>
     </application>
 

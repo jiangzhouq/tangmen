@@ -9,17 +9,18 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-import com.baidu.frontia.Frontia;
 import com.baidu.frontia.FrontiaFile;
 import com.baidu.frontia.api.FrontiaStorage;
 import com.baidu.frontia.api.FrontiaStorageListener.FileListListener;
 import com.baidu.frontia.api.FrontiaStorageListener.FileProgressListener;
 import com.baidu.frontia.api.FrontiaStorageListener.FileTransferListener;
 import com.jiangzhouq.tangmen.data.Constants;
-import com.suredigit.inappfeedback.FeedbackDialog;
 import com.umeng.analytics.MobclickAgent;
-import com.umeng.fb.FeedbackAgent;
+import com.umeng.update.UmengUpdateAgent;
+import com.umeng.update.UmengUpdateListener;
+import com.umeng.update.UpdateResponse;
 
 public class Tangmen extends FragmentActivity {
 	private static final boolean LOG_SWITCH = Constants.LOG_SWITCH;
@@ -40,6 +41,7 @@ public class Tangmen extends FragmentActivity {
 //		}
 //		mCloudStorage = Frontia.getStorage();
 //		list();
+	    UmengUpdateAgent.update(this);
 	}
 	@Override
 	protected void onResume() {
@@ -62,13 +64,27 @@ public class Tangmen extends FragmentActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()){
 			case R.id.action_settings:
-				FeedbackDialog feedBackDialog = new FeedbackDialog(this, "AF-8565EE971698-9C");
-				feedBackDialog.show();
 				break;
 			case R.id.action_feedback:
-				FeedbackAgent agent = new FeedbackAgent(Tangmen.this);
-				agent.startFeedbackActivity();
-				
+				startActivity(new Intent(this, FeedbackActivity.class));
+				break;
+			case R.id.action_update:
+				UmengUpdateAgent.forceUpdate(this);
+				UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
+			        @Override
+			        public void onUpdateReturned(int updateStatus,UpdateResponse updateInfo) {
+			            switch (updateStatus) {
+			            case 1: // has no update
+			                Toast.makeText(Tangmen.this, "没有更新", Toast.LENGTH_SHORT)
+			                        .show();
+			                break;
+			            case 3: // time out
+			                Toast.makeText(Tangmen.this, "超时", Toast.LENGTH_SHORT)
+			                        .show();
+			                break;
+			            }
+			        }
+			});
 				break;
 		}
 		return super.onOptionsItemSelected(item);

@@ -1,0 +1,135 @@
+# view res/layout/umeng_example_analytics_fragment_tabs.xml #generated:1
+-keep class android.support.v4.app.FragmentTabHost { <init>(...); }
+
+# view res/layout/activity_singlepane_empty.xml #generated:23
+-keep class com.markupartist.android.widget.ActionBar { <init>(...); }
+
+# view res/layout/actionbar.xml #generated:98
+-keep class com.markupartist.android.widget.ScrollingTextView { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.umeng.ad.AdDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:176
+-keep class com.umeng.common.net.DownloadingService { <init>(...); }
+
+# view AndroidManifest.xml #generated:15
+-keep class com.umeng.example.UmengHome { <init>(...); }
+
+# view AndroidManifest.xml #generated:147
+-keep class com.umeng.example.ad.AdHome { <init>(...); }
+
+# view AndroidManifest.xml #generated:104
+-keep class com.umeng.example.ad.BannerExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:107
+-keep class com.umeng.example.ad.InterstitialExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:131
+-keep class com.umeng.example.analytics.AnalyticsHome { <init>(...); }
+
+# view AndroidManifest.xml #generated:137
+-keep class com.umeng.example.analytics.FragmentStack { <init>(...); }
+
+# view AndroidManifest.xml #generated:138
+-keep class com.umeng.example.analytics.FragmentTabs { <init>(...); }
+
+# view AndroidManifest.xml #generated:135
+-keep class com.umeng.example.analytics.WebviewAnalytic { <init>(...); }
+
+# view AndroidManifest.xml #generated:151
+-keep class com.umeng.example.fb.FbHome { <init>(...); }
+
+# view AndroidManifest.xml #generated:143
+-keep class com.umeng.example.tools.ToolsHome { <init>(...); }
+
+# view AndroidManifest.xml #generated:141
+-keep class com.umeng.example.update.UpdateHome { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.umeng.example.xp.BannerExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:88
+-keep class com.umeng.example.xp.BannerUfpExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:31
+-keep class com.umeng.example.xp.ContainerExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:64
+-keep class com.umeng.example.xp.ContainerHeaderExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.umeng.example.xp.FullIconExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.umeng.example.xp.HandlerExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:92
+-keep class com.umeng.example.xp.HandlerUfpExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:40
+-keep class com.umeng.example.xp.HyperlinkTextExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.umeng.example.xp.MyTabActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:72
+-keep class com.umeng.example.xp.PromoterDataExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
+-keep class com.umeng.example.xp.PushExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:60
+-keep class com.umeng.example.xp.TabFragment { <init>(...); }
+
+# view AndroidManifest.xml #generated:56
+-keep class com.umeng.example.xp.WapExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:96
+-keep class com.umeng.example.xp.WapUfpExample { <init>(...); }
+
+# view AndroidManifest.xml #generated:26
+-keep class com.umeng.example.xp.XpHome { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.umeng.fb.ContactActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:124
+-keep class com.umeng.fb.ConversationActivity { <init>(...); }
+
+# view res/layout/umeng_xp_large_gallery.xml #generated:12
+-keep class com.umeng.newxp.view.UGallery { <init>(...); }
+
+# view res/layout/umeng_xp_handler_gallery.xml #generated:6
+-keep class com.umeng.newxp.view.widget.SwipeView { <init>(...); }
+
+# view res/layout/umeng_xp_handler_gallery.xml #generated:12
+-keep class com.umeng.newxp.view.widget.SwipeViewPointer { <init>(...); }
+
+# view res/layout/umeng_example_fb_home.xml #generated:2
+# view res/layout/umeng_example_home_dashboard_fragment.xml #generated:1
+# view res/layout/umeng_example_xp_home.xml #generated:1
+-keep class com.umeng.ui.widget.DashboardLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:157
+-keep class com.umeng.ut.UtActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:160
+-keep class com.umeng.ut.UtLoadPic { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
+-keep class com.umeng.xp.view.WapActivity { <init>(...); }
+
+# onClick res/layout/umeng_example_analytics.xml #generated:17
+# onClick res/layout/umeng_example_analytics.xml #generated:26
+# onClick res/layout/umeng_example_analytics.xml #generated:35
+# onClick res/layout/umeng_example_analytics.xml #generated:44
+# onClick res/layout/umeng_example_analytics.xml #generated:53
+# onClick res/layout/umeng_example_analytics.xml #generated:62
+# onClick res/layout/umeng_example_analytics.xml #generated:7
+# onClick res/layout/umeng_example_analytics.xml #generated:71
+# onClick res/layout/umeng_example_analytics.xml #generated:80
+# onClick res/layout/umeng_example_analytics.xml #generated:89
+# onClick res/layout/umeng_example_analytics.xml #generated:98
+-keepclassmembers class * { *** onButtonClick(...); }
+
