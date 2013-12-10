@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/pb_more" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:gravity="center" android:id="@id/pb_more_view" android:layout_width="fill_parent" android:layout_height="@dimen/pb_list_load_more_height">
+        <TextView android:textSize="@dimen/pb_more_text_size" android:id="@id/pb_more_text" android:paddingTop="@dimen/pb_list_load_more_text_padding_top" android:paddingBottom="@dimen/pb_list_load_more_text_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pb_load_more" tb:tb_textColor="@color/pb_more_txt" style="@style/text_shadow_style" />
+        <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pb_list_load_more_progress_margin_left" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleSmall" />
+    </LinearLayout>
+</LinearLayout>

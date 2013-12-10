@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:id="@id/love" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/btn_love" android:background="@drawable/frs_btn_like" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/frs_like_txt" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_love" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attention_n" android:shadowColor="@color/frs_like_shadow" android:shadowDy="1.0" android:shadowRadius="1.0" android:drawableLeft="@drawable/icon_like" />
+</FrameLayout>

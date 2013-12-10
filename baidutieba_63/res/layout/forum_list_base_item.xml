@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.HeadImageView android:layout_gravity="center_vertical" android:id="@id/forum_avatar" android:layout_width="55.0dip" android:layout_height="55.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:scaleType="fitCenter" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="15.0sp" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:singleLine="true" tb:tb_textColor="@color/name_text_color" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_marginBottom="2.0dip">
+            <TextView android:textSize="12.0sp" android:gravity="center_vertical" android:id="@id/member_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:drawablePadding="4.0dip" tb:tb_textColor="@color/count_text_color" />
+            <TextView android:textSize="12.0sp" android:gravity="center_vertical" android:id="@id/thread_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="4.0dip" tb:tb_textColor="@color/count_text_color" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:ellipsize="end" android:id="@id/slogan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" tb:tb_textColor="@color/slogan_text_color" />
+    </LinearLayout>
+</merge>

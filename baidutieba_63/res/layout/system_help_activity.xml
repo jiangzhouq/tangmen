@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:tb_background="@color/bg_page_setting"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/view_navigation_bar">
+        <com.baidu.tieba.more.SettingTextTipView android:id="@id/clear_cache" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" tb:settingText="@string/clear_cash"> tb:tb_background="@drawable/more_all" >
+</com.baidu.tieba.more.SettingTextTipView>
+        <com.baidu.tieba.more.SettingTextTipView android:id="@id/clear_im" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" tb:settingText="@string/clear_im" tb:tb_background="@drawable/more_all" />
+        <com.baidu.tieba.more.SettingTextSwitchView android:id="@id/sv_earphone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" tb:settingText="@string/group_errphone" tb:tb_background="@drawable/more_all" />
+        <TextView android:gravity="center" android:id="@id/tv_earphone_tip" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_errphone_tip" tb:settingText="@string/group_errphone_tip" tb:tb_textColor="@color/setting_text" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+</RelativeLayout>

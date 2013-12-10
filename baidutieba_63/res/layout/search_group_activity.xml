@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/mparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:id="@id/search_tab_bg" android:background="@drawable/inputbox_topbg" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_tap_text_layout" android:background="@drawable/inputbox_top" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/search_bar_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/icon_head_bar_search" />
+            <EditText android:textSize="12.0sp" android:textColorHint="#ffa5a6a8" android:layout_gravity="left|center" android:id="@id/home_et_search" android:background="@null" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/search_group_id" android:singleLine="true" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionGo" />
+            <Button android:gravity="center" android:id="@id/home_bt_search_del" android:background="@drawable/search_delete_button" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="8.0dip" />
+        </LinearLayout>
+        <Button android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="right|center" android:id="@id/home_bt_search_s" android:background="@drawable/search_tap_go_dr" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/search" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/frame_layout" android:background="#fff1f1f1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.baidu.adp.widget.ListView.BdListView android:id="@id/home_lv_search" android:background="@android:color/transparent" android:visibility="visible" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/list_selector" android:cacheColorHint="@android:color/transparent" android:divider="#ffd3d3d3" android:dividerHeight="1.0dip" />
+        <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/text_no_data" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="42.0dip" android:text="@string/text_no_search_record" tb:tb_textColor="@color/text_no_data" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/home_progress_search" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </FrameLayout>
+</LinearLayout>

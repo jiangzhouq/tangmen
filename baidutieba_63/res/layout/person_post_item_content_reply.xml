@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/item_content" android:background="@drawable/bg_list_border" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.tieba.person.post.ReplyLinearLayout android:orientation="vertical" android:id="@id/content_container" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="15.0sp" android:id="@id/original_post_title" android:background="@drawable/person_post_line" android:padding="@dimen/person_post_reply_ori_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

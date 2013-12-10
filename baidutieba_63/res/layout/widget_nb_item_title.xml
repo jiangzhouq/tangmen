@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:ellipsize="end" android:gravity="center" android:id="@id/navigationTitle" android:paddingLeft="@dimen/navi_title_padding_left" android:paddingRight="@dimen/navi_title_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" tb:tb_textColor="@color/common_page_title" style="@style/title_info_shadow"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba" />

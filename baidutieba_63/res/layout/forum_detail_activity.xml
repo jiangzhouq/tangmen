@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:tb_background="@color/common_bg_page"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.baidu.tieba.view.CustomScrollView android:id="@id/scoll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_below="@id/view_navigation_bar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.baidu.tieba.forumdetail.ItemHeaderView android:id="@id/item_header" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.baidu.tieba.forumdetail.ItemInfoView android:id="@id/item_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.baidu.tieba.forumdetail.ItemHotThreadView android:orientation="vertical" android:id="@id/item_hot_thread" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="70.0dip" />
+        </LinearLayout>
+    </com.baidu.tieba.view.CustomScrollView>
+    <com.baidu.tieba.forumdetail.ItemFootNavView android:id="@id/item_foot_nav" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" tb:tb_background="@drawable/bg_brief_attention_bar" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:custom="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <item android:state_enabled="false" android:drawable="@drawable/btn_posts_camera_d" />
+    <item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/btn_posts_camera_s" />
+    <item android:state_focused="true" android:state_enabled="true" android:drawable="@drawable/btn_posts_camera_l" />
+    <item android:drawable="@drawable/btn_posts_camera_n" />
+</selector>

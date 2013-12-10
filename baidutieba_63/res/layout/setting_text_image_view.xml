@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/container" style="@style/setting_bg_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/text" android:text="@string/account_manager" style="@style/setting_bg_text" />
+    <com.baidu.tieba.view.HeadImageView android:id="@id/icon" android:focusable="false" android:clickable="false" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="2.0dip" android:scaleType="fitCenter" />
+    <ImageView android:id="@id/arrow" style="@style/setting_bg_arrow" />
+</LinearLayout>

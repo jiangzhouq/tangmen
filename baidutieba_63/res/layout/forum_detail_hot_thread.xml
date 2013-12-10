@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <TextView android:id="@id/ht_divider_line_0" android:layout_width="fill_parent" android:layout_height="1.0dip" tb:tb_background="@color/ht_title_top_sep_line" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ht_title_box" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" tb:tb_background="@color/forum_detail_ht_bg_color">
+        <TextView android:textSize="@dimen/default_size_20" android:gravity="center_vertical" android:id="@id/ht_title" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forum_detail_ht_title" android:drawablePadding="5.0dip" tb:tb_textColor="@color/forum_detail_ht_title_color" />
+        <ImageView android:id="@id/ht_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" tb:tb_src="@drawable/icon_hot" />
+    </LinearLayout>
+    <TextView android:id="@id/ht_divider_line_1" android:layout_width="fill_parent" android:layout_height="1.0dip" tb:tb_background="@color/ht_title_bottom_sep_line" />
+</merge>

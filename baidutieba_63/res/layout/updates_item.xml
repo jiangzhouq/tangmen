@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root_view" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <RelativeLayout android:id="@id/layout_title" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_alignParentTop="true" tb:tb_background="@drawable/bg_information_up">
+        <TextView android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" tb:tb_textColor="@color/group_updates_title" />
+        <TextView android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" tb:tb_textColor="@color/group_updates_time" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/layout_body" android:paddingLeft="10.0dip" android:paddingTop="8.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/layout_title" tb:tb_background="@drawable/selector_group_updates_bottom_bg">
+        <CheckBox android:id="@id/cb_select" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" android:button="@drawable/checkbox_group_updates_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <com.baidu.tieba.view.HeadImageView android:id="@id/iv_head" android:background="@drawable/photo_bg" android:clickable="true" android:layout_width="46.0dip" android:layout_height="46.0dip" android:scaleType="fitCenter" android:layout_toRightOf="@id/cb_select" android:layout_alignParentTop="true" />
+        <TextView android:textSize="16.0sp" android:ellipsize="end" android:id="@id/tv_group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:lines="1" android:singleLine="true" android:layout_toRightOf="@id/iv_head" android:layout_alignParentTop="true" tb:tb_textColor="@color/validate_item_user_name" />
+        <TextView android:textSize="14.0sp" android:ellipsize="end" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="6.0dip" android:singleLine="false" android:layout_toRightOf="@id/iv_head" android:layout_below="@id/tv_group_name" tb:tb_textColor="@color/validate_item_reason" />
+    </RelativeLayout>
+</RelativeLayout>

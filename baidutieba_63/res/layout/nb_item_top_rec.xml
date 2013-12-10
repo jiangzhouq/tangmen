@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/finish" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:gravity="center" android:id="@id/title_finish" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/done" style="@style/navi_btn_bg_comm" />
+    <TextView android:gravity="center" android:id="@id/title_finish_cover" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/navi_btn_bg_comm" />
+</FrameLayout>

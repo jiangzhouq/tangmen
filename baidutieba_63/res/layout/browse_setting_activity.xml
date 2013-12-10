@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:background="@color/bg_page_setting" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:setting="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/view_navigation_bar">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.baidu.tieba.more.SettingTextSwitchView android:id="@id/eyeshield_mode" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" setting:settingText="@string/eyeshield_mode" />
+            <com.baidu.tieba.more.SettingTextSwitchView android:id="@id/img_thrift_setting" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" setting:settingText="@string/browser_image_thrift" setting:settingTip="@string/browser_image_thrift_tip" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/img_browser" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" setting:settingText="@string/image_show_setting" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/img_upload" android:layout_width="fill_parent" android:layout_height="fill_parent" setting:settingText="@string/upload_image_quality" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/show_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.0dip" setting:settingText="@string/show_photo" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/font_size" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" setting:settingText="@string/font_size" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

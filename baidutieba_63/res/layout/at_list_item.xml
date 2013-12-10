@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="65.0dip" android:layout_height="65.0dip">
+        <com.baidu.tieba.view.HeadImageView android:id="@id/photo" android:layout_width="45.0dip" android:layout_height="45.0dip" android:scaleType="centerCrop" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/chat_content" android:padding="0.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="15.0sp" android:gravity="center" android:id="@id/name" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="13.0sp" android:gravity="left" android:id="@id/desc" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/name" />
+        <TextView android:textSize="10.0sp" android:textColor="#ffb2b6ba" android:gravity="center" android:id="@id/at_list_nodata" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

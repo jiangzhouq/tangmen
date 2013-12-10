@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/frs_goodheader_text" android:textColor="@color/frs_good_text_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/frs_dia_good_text" android:paddingLeft="@dimen/frs_goodheader_text_padding" android:paddingRight="@dimen/frs_goodheader_text_padding" android:layout_width="@dimen/frs_goodheader_text_width" android:layout_height="@dimen/frs_goodheader_text_height" android:singleLine="true" />
+    <ImageView android:layout_gravity="right|center" android:id="@id/frs_dia_divider" android:background="@color/frs_goodheader_line" android:layout_width="@dimen/frs_goodheader_line_right_width" android:layout_height="@dimen/frs_goodheader_line_right_height" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/frs_btm_divider" android:background="@color/frs_goodheader_line" android:layout_width="fill_parent" android:layout_height="@dimen/frs_goodheader_line_bottom_height" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/frs_btm_divider_s" android:background="@color/frs_goodheader_line_S" android:visibility="gone" android:layout_width="@dimen/frs_goodheader_line_bottom_s_width" android:layout_height="@dimen/frs_goodheader_line_bottom_s_height" />
+</FrameLayout>

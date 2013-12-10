@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:background="@color/bg_page_setting" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:setting="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/view_navigation_bar">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.baidu.tieba.more.SettingTextImageView android:id="@id/personInfo" android:layout_width="fill_parent" android:layout_height="wrap_content" setting:settingText="@string/person_info_text" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/accountManager" android:layout_width="fill_parent" android:layout_height="wrap_content" setting:settingText="@string/account_manager" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/browseSetting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" setting:settingText="@string/browsing_settings" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/messageSetting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" setting:settingText="@string/msg_remind" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/systemhelpsetting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" setting:settingText="@string/systemhelpsetting" />
+            <com.baidu.tieba.more.SettingTextVersionView android:id="@id/versionInfo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" setting:settingText="@string/version_info" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/feedBack" android:layout_width="fill_parent" android:layout_height="wrap_content" setting:settingText="@string/feedback" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/recommend" android:layout_width="fill_parent" android:layout_height="wrap_content" setting:settingText="@string/recommend_apps" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

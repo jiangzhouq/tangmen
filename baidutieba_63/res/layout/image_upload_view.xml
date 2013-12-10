@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:paddingTop="@dimen/pb_editor_imageupload_padding_top" android:paddingBottom="@dimen/pb_editor_imageupload_paddinb_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_imageupload_button_height" android:minWidth="@dimen/pb_editor_imageupload_sideweight_min_width" android:layout_weight="9.5" />
+        <Button android:textSize="@dimen/pb_editor_imageupload_button_text_size" android:id="@id/btn_image_upload_camera" android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_imageupload_button_height" android:minWidth="@dimen/pb_editor_imageupload_button_min_width" android:text="@string/take_photo" android:layout_weight="6.0" tb:tb_background="@drawable/but_posts_pic_gray" tb:tb_textColor="@color/image_upload_button_text_color" />
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_imageupload_button_height" android:minWidth="@dimen/pb_editor_imageupload_middleweight_min_width" android:layout_weight="9.5" />
+        <Button android:textSize="@dimen/pb_editor_imageupload_button_text_size" android:id="@id/btn_image_upload_album" android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_imageupload_button_height" android:minWidth="@dimen/pb_editor_imageupload_button_min_width" android:text="@string/from_album" android:layout_weight="6.0" tb:tb_background="@drawable/but_posts_pic_gray" tb:tb_textColor="@color/image_upload_button_text_color" />
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_imageupload_button_height" android:minWidth="@dimen/pb_editor_imageupload_sideweight_min_width" android:layout_weight="9.5" />
+    </LinearLayout>
+    <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_horizontalscroll_height" android:layout_marginTop="@dimen/pb_editor_horizontalscroll_margin_top">
+        <LinearLayout android:orientation="horizontal" android:id="@id/mGallery" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+</merge>

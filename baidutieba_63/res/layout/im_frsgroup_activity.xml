@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/view_root" android:background="@color/frsgroup_container_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RadioGroup android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/raidos_change" android:background="@drawable/bg_pop_most" android:paddingLeft="10.0dip" android:paddingTop="3.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="53.0dip" android:checkedButton="@id/radio_recommend">
+            <RadioButton android:textSize="16.0sp" android:textColor="@drawable/im_textcolor_groupradios" android:gravity="center" android:id="@id/radio_recommend" android:background="@drawable/radio_commen_bg_left" android:layout_width="wrap_content" android:layout_height="45.0dip" android:checked="true" android:button="@null" android:text="@string/frsgroup_recommend" android:layout_weight="1.0" />
+            <RadioButton android:textSize="16.0sp" android:textColor="@drawable/im_textcolor_groupradios" android:gravity="center" android:id="@id/radio_hot" android:background="@drawable/radio_commen_bg_middle_1" android:layout_width="wrap_content" android:layout_height="45.0dip" android:button="@null" android:text="@string/frsgroup_hot" android:layout_weight="1.0" />
+            <RadioButton android:textSize="16.0sp" android:textColor="@drawable/im_textcolor_groupradios" android:gravity="center" android:id="@id/radio_official" android:background="@drawable/radio_commen_bg_right" android:layout_width="wrap_content" android:layout_height="45.0dip" android:layout_marginTop="-1.0dip" android:button="@null" android:text="@string/frsgroup_official" android:layout_weight="1.0" />
+        </RadioGroup>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

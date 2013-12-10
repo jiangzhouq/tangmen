@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baidu.adp.widget.ScrollView.BdPullRefreshScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/person_info_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/info" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@id/background_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/background_image" android:layout_width="fill_parent" android:layout_height="@dimen/person_topimage_height" android:scaleType="fitXY" />
+                            <ImageView android:layout_gravity="bottom" android:background="@drawable/cent_banner_zhezhao_n" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        </FrameLayout>
+                        <ImageView android:id="@id/background_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/person_center_height" tb:tb_background="@color/person_bottom" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_gravity="bottom" android:id="@id/info_layout" android:paddingLeft="@dimen/person_center_btn_padding_left" android:paddingRight="@dimen/person_center_btn_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <FrameLayout android:id="@id/photo_frame" android:layout_width="@dimen/person_image_layout_width" android:layout_height="@dimen/person_image_layout_height" android:layout_marginBottom="@dimen/person_center_btn_padding_bottom">
+                            <com.baidu.tieba.view.HeadImageView android:layout_gravity="center" android:id="@id/photo_bg" android:layout_width="@dimen/person_imagebg_width" android:layout_height="@dimen/person_imagebg_height" android:scaleType="centerCrop" />
+                            <com.baidu.tieba.view.HeadImageView android:layout_gravity="center" android:id="@id/photo" android:background="@color/person_image_bg" android:layout_width="@dimen/person_image_width" android:layout_height="@dimen/person_image_height" android:scaleType="centerCrop" />
+                        </FrameLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@id/operation_buttons" android:paddingLeft="@dimen/person_center_btn_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/person_center_info_minheight">
+                                <TextView android:textSize="@dimen/person_name_font" android:gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/person_center_info_minheight" android:drawablePadding="@dimen/person_center_btn_drawable_left" tb:tb_textColor="@color/person_name" />
+                                <com.baidu.tieba.view.UserIconBox android:layout_gravity="center_vertical" android:id="@id/user_icon_box" android:paddingLeft="@dimen/person_usericon_padding_left" android:paddingTop="@dimen/person_usericon_padding_top" android:paddingRight="@dimen/person_usericon_padding_right" android:paddingBottom="@dimen/person_usericon_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <TextView android:textSize="@dimen/person_centerbtn_font" android:ellipsize="end" android:id="@id/intro" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/person_intro_margin_top" android:layout_marginBottom="@dimen/person_intro_margin_bottom" android:singleLine="true" tb:tb_textColor="@color/person_intro" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </com.baidu.adp.widget.ScrollView.BdPullRefreshScrollView>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/not_login_view" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:tb_background="@color/forumfeed_login_container">
+            <ImageView android:layout_gravity="center" android:id="@id/not_login_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:scaleType="fitXY" tb:tb_background="@drawable/pic_inset_login" />
+            <TextView android:textSize="14.0sp" android:id="@id/not_login_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/not_login_text" tb:tb_textColor="@color/person_login_txt" />
+            <LinearLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="18.0dip" android:gravity="center" android:id="@id/login_btn" android:layout_width="0.0dip" android:layout_height="46.0dip" android:layout_marginRight="12.0dip" android:text="@string/account_login" android:layout_weight="1.0" tb:tb_textColor="@color/person_login_btn" />
+                <Button android:textSize="18.0dip" android:gravity="center" android:id="@id/reg_btn" android:layout_width="0.0dip" android:layout_height="46.0dip" android:text="@string/account_regedit" android:layout_weight="1.0" tb:tb_textColor="@color/person_regist_btn" />
+            </LinearLayout>
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150.0dip" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </FrameLayout>
+</LinearLayout>

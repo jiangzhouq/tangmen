@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baidu.tieba.view.NoSwipeableViewPager android:id="@id/pagercontent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </FrameLayout>
+</LinearLayout>

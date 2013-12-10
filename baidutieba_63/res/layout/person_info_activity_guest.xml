@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/guest" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/guest_operation_btns" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/guest_btn_attention" android:clickable="true" android:layout_width="@dimen/person_center_btn_width" android:layout_height="@dimen/person_center_btn_height" android:layout_marginRight="@dimen/person_center_btn_margin_right">
+            <ImageView android:id="@id/btn_attention_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_center_attenbtn_margin_left" />
+            <TextView android:textSize="@dimen/person_centerbtn_font" android:id="@id/btn_attention_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_center_btntext_margin_left" android:layout_marginRight="@dimen/person_center_btntext_margin_right" android:text="@string/guest_attention" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/guest_btn_send_message" android:clickable="true" android:layout_width="@dimen/person_center_btn_width" android:layout_height="@dimen/person_center_btn_height">
+            <ImageView android:id="@id/btn_send_message_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_center_msgbtn_margin_left" android:src="@drawable/icon_cent_lately" tb:tb_src="@drawable/icon_pop_news" />
+            <TextView android:textSize="@dimen/person_centerbtn_font" android:id="@id/btn_send_message_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_center_btntext_margin_left" android:layout_marginRight="@dimen/person_center_btntext_margin_right" android:text="@string/send_message" tb:tb_textColor="@color/person_send_message" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/sudoku_buttons_guest" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_bigbtn_margin" android:layout_marginRight="@dimen/person_bigbtn_margin">
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/guest_forums" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/guest_forums_image" tb:tb_src="@drawable/icon_pop_ba" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/guest_forums_text" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/guest_forums_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/guest_posts" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/guest_posts_image" tb:tb_src="@drawable/icon_pop_tiezi" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/guest_posts_text" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/guest_posts_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/guest_attention" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/guest_attention_image" tb:tb_src="@drawable/icon_pop_eye" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/guest_attention_text" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/guest_attention_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_bigbtn_margin" android:layout_marginRight="@dimen/person_bigbtn_margin">
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/guest_fans" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/guest_fans_image" tb:tb_src="@drawable/icon_pop_fans" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/guest_fans_text" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/guest_fans_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:orientation="vertical" android:id="@id/place_holder1" style="@style/personal_big_button" />
+            </RelativeLayout>
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:orientation="vertical" android:id="@id/place_holder2" style="@style/personal_big_button" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/dialogparent" android:layout_width="260.0dip" android:layout_height="wrap_content" tb:tb_background="@drawable/floating_found_prompt"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/img_prompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="14.0dip" tb:tb_background="@drawable/pic_found_prompt" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/prompt_tip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_create_private_tip" tb:tb_textColor="@color/create_group_private_tip" />
+    <Button android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/isee" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginLeft="38.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="38.0dip" android:layout_marginBottom="22.0dip" android:text="@string/group_create_private_isee" tb:tb_background="@drawable/btn_blue_square" tb:tb_textColor="@color/home_btngo_txt" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.editortool.EditorToolButton android:enabled="false" android:layout_gravity="center_vertical" android:id="@id/select_audio" android:clickable="true" android:layout_width="@dimen/pb_editor_button_width" android:layout_height="@dimen/pb_editor_button_height" android:layout_alignParentLeft="true" tb:tb_src="@drawable/new_pb_audio_btn" />
+    <com.baidu.tieba.editortool.EditorToolButton android:enabled="false" android:layout_gravity="center_vertical" android:id="@id/select_image" android:clickable="true" android:layout_width="@dimen/pb_editor_button_width" android:layout_height="@dimen/pb_editor_button_height" android:layout_marginLeft="@dimen/pb_editor_button_distance" android:layout_toRightOf="@id/select_audio" tb:tb_src="@drawable/new_pb_camera_btn" />
+    <com.baidu.tieba.editortool.EditorToolButton android:enabled="false" android:layout_gravity="center_vertical" android:id="@id/select_face" android:clickable="true" android:layout_width="@dimen/pb_editor_button_width" android:layout_height="@dimen/pb_editor_button_height" android:layout_marginLeft="@dimen/pb_editor_button_distance" android:layout_toRightOf="@id/select_image" tb:tb_src="@drawable/new_pb_face_btn" />
+    <com.baidu.tieba.editortool.EditorToolButton android:enabled="false" android:layout_gravity="center_vertical" android:id="@id/select_at" android:clickable="true" android:layout_width="@dimen/pb_editor_button_width" android:layout_height="@dimen/pb_editor_button_height" android:layout_marginLeft="@dimen/pb_editor_button_distance" android:layout_toRightOf="@id/select_face" tb:tb_src="@drawable/new_pb_at_btn" />
+</merge>

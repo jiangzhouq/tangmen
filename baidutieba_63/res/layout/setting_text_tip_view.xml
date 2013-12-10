@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/container" style="@style/setting_bg_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/text" android:text="@string/msg_remind" style="@style/setting_bg_text" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff7f7f7f" android:id="@id/tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:singleLine="true" />
+    <ImageView android:id="@id/arrow2" style="@style/setting_bg_arrow" />
+</LinearLayout>

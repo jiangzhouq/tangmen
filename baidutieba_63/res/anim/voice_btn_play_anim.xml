@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="330" android:drawable="@drawable/icon_thread_voice_reply_curve_three" />
+    <item android:duration="330" android:drawable="@drawable/icon_thread_voice_reply_curve_one" />
+    <item android:duration="330" android:drawable="@drawable/icon_thread_voice_reply_curve_two" />
+</animation-list>

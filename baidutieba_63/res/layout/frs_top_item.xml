@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/frs_top_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <TextView android:textSize="@dimen/frs_top_text" android:gravity="center_vertical" android:id="@id/frs_top_title" android:layout_width="fill_parent" android:layout_height="@dimen/frs_top_item_height" android:layout_marginLeft="@dimen/frs_top_padding" android:layout_marginRight="@dimen/frs_top_padding" android:singleLine="true" android:drawablePadding="@dimen/frs_top_icon_margin" tb:tb_textColor="@color/frs_top_text" />
+    <View android:id="@id/frs_top_divider" android:layout_width="fill_parent" android:layout_height="@dimen/frs_top_item_divider" android:layout_marginLeft="@dimen/frs_top_padding" android:layout_marginRight="@dimen/frs_top_padding" tb:tb_background="@color/frs_top_item_divider_bg" />
+</LinearLayout>

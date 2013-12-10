@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/fn_care_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="0.5" tb:tb_background="@drawable/forum_detail_foot_nav_selector">
+        <ImageView android:id="@id/icon_brief_care" android:layout_width="wrap_content" android:layout_height="wrap_content" tb:tb_src="@drawable/icon_brief_attention" />
+        <TextView android:textSize="@dimen/default_size_22" android:gravity="center" android:layout_gravity="center" android:id="@id/fn_care_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forum_detail_fans" tb:tb_textColor="@color/forum_detail_foot_nav" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/fn_enter_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="0.5" tb:tb_background="@drawable/forum_detail_foot_nav_selector">
+        <ImageView android:id="@id/icon_brief_jinba" android:layout_width="wrap_content" android:layout_height="wrap_content" tb:tb_src="@drawable/icon_brief_jinba" />
+        <TextView android:textSize="@dimen/default_size_22" android:gravity="center" android:layout_gravity="center" android:id="@id/fn_enter_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forum_detail_enter" tb:tb_textColor="@color/forum_detail_foot_nav" />
+    </LinearLayout>
+</merge>

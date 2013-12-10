@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/search_bg_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" tb:tb_background="@drawable/inputbox_top"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <ImageView android:id="@id/search_bar_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="4.0dip" tb:tb_src="@drawable/icon_head_bar_search" />
+    <TextView android:textSize="@dimen/search_bar_default_text" android:textColorHint="#ffa5a6a8" android:gravity="center_vertical" android:id="@id/search_bar_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/search_bar_post_1" android:singleLine="true" android:layout_weight="1.0" />
+</LinearLayout>

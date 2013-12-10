@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/no_network_parent" android:layout_width="fill_parent" android:layout_height="45.0dip" tb:tb_background="@drawable/bg_no_network"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <ImageView android:id="@id/no_network_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_centerVertical="true" tb:tb_src="@drawable/icon_error" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/no_network_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="14.0sp" android:id="@id/no_network_guide1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/validate_too_much" tb:tb_textColor="@color/no_network_guide1" />
+        <TextView android:textSize="12.0sp" android:id="@id/no_network_guide2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/validate_shut_down" tb:tb_textColor="@color/no_network_guide2" />
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/no_network_showmore" android:background="@drawable/search_delete_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" tb:tb_textColor="@color/no_network_showmore" />
+</RelativeLayout>

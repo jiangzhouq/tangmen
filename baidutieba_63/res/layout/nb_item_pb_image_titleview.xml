@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/camera" android:layout_toRightOf="@id/back" android:layout_centerHorizontal="true" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:singleLine="true" style="@style/title_3_info" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/title_page" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:singleLine="true" style="@style/title_3_info" />
+</LinearLayout>

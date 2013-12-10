@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/update_right" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <Button android:layout_gravity="center_vertical" android:id="@id/btn_edit" android:background="@drawable/title_comm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/edit" android:layout_alignParentRight="true" android:layout_centerVertical="true" tb:tb_textColor="@color/frs_top_title" style="@style/title_comm" />
+    <Button android:layout_gravity="center_vertical" android:id="@id/btn_cancel" android:background="@drawable/title_comm" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/title_comm" />
+</FrameLayout>

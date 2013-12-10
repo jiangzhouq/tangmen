@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="116.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="14.0dip">
+            <EditText android:gravity="top" android:layout_gravity="center" android:id="@id/edit_text" android:paddingLeft="10.0dip" android:paddingTop="8.0dip" android:paddingRight="10.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/group_create_step2_tip" android:maxLength="300" tb:tb_background="@drawable/bg_found_information" tb:tb_textColor="@color/group_create_step_color" tb:tb_textColorHint="@color/group_create_color_hint" />
+            <TextView android:layout_gravity="bottom|right|center" android:id="@id/edit_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="300" tb:tb_textColor="@color/group_create_color_hint" />
+        </FrameLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:tb_background="@drawable/common_bg"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/body_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baidu.adp.widget.ListView.BdListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:scrollingCache="false" android:cacheColorHint="@android:color/transparent" android:divider="@null" style="@style/auto_skin_list" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <TextView android:textSize="@dimen/subpb_listitem_loadmore_text_size" android:id="@id/btn_loadprevious" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/subpb_listitem_loadmore_padding_top" android:layout_marginBottom="@dimen/subpb_listitem_loadmore_padding_bottom" android:text="@string/view_previous_floor" tb:tb_textColor="@color/sub_pb_more_text" />
+    <ImageView android:id="@id/image_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pb_header_little_icon_drawable_padding" tb:tb_src="@drawable/icon_upward" />
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleSmall" />
+</merge>

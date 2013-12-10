@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.square.SquareViewPager android:id="@id/carousel_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.baidu.adp.widget.IndicatorView android:layout_gravity="bottom|right|center" android:id="@id/carousel_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" tb:spacing="@dimen/square_indicator_spacing" tb:drawable="@drawable/icon_banner_n" tb:selector="@drawable/icon_banner_s" tb:count="4" />
+</merge>

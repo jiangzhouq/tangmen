@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.tieba.view.GoodGridView android:id="@id/good_gridview" android:paddingLeft="@dimen/frs_goodheader_padding" android:paddingRight="@dimen/frs_goodheader_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:numColumns="4" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/divider_line" android:background="@color/frs_goodheader_line_end" android:layout_width="fill_parent" android:layout_height="@dimen/frs_goodheader_line_bottom_height" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:background="@color/list_pressed_color_day" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/group_card_image" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/group_card_inner_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/group_card_setting" android:background="@drawable/bg_brief_attention_bar" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/groud_card_save" android:background="@drawable/group_info_foot_selector" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/forum_detail_footer_left_margin_left" android:layout_marginRight="@dimen/forum_detail_footer_left_margin_right" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/forum_detail_footer_txt_size" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/groud_card_save_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_card_save" android:drawablePadding="3.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/group_card_share" android:background="@drawable/group_info_foot_selector" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/forum_detail_footer_left_margin_left" android:layout_marginRight="@dimen/forum_detail_footer_left_margin_right" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/forum_detail_footer_txt_size" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/group_card_share_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_card_share" android:drawablePadding="3.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

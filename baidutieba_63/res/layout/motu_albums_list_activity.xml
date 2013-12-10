@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/motu_photowonder_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:pw="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <GridView android:id="@id/jigsaw_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="false" android:horizontalSpacing="4.0dip" android:verticalSpacing="4.0dip" android:numColumns="3" android:layout_above="@id/jigsaw_selected_rl" android:layout_below="@id/view_navigation_bar" />
+    <RelativeLayout android:id="@id/jigsaw_selected_rl" android:layout_width="fill_parent" android:layout_height="112.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="14.0sp" android:textColor="#ffc2cad0" android:gravity="center" android:id="@id/jigsaw_selected_text" android:background="@drawable/motu_jigsaw_selelct_text" android:layout_width="fill_parent" android:layout_height="30.0dip" android:text="@string/jigsaw_selected_text" android:shadowColor="#ff15181a" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <HorizontalScrollView android:id="@id/hsv" android:background="@drawable/motu_jigsaw_selelct_bottom" android:scrollbars="horizontal" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="82.0dip" android:layout_alignParentBottom="true">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/selected_ll" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </HorizontalScrollView>
+    </RelativeLayout>
+</RelativeLayout>

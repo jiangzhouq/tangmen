@@ -73,12 +73,14 @@ name = 1
 #client = MongoClient('ds039507.mongolab.com',39507)
 #db = client.tangmen
 #db.authenticate('jiangzhouq', 'biu1biu2biu3')
+str102 = ''
 
 while True:
+	global str102
 	find_re = re.compile(r'<h1>(.+?)</h1>.+?<div id="content">(.+?)</div>.+?目录</a> &rarr; <a href="(.+?)">下一章'.encode('gb2312'), re.DOTALL)
 	url = baseurl + url0
 	html = urllib2.urlopen(url).read()  
-	for x in find_re.findall(html):  
+	for x in find_re.findall(html): 
 		str1 = x[0].decode('gb2312', 'ignore').encode('utf-8')
 		str101 = str1.replace('第一集','').replace('第二集','').replace('第三集','').replace('第四集','').replace('第五集','');
 		str102 = str101.replace('天梦冰蚕','',1).replace('怪物学院','').replace('武魂融合','').replace('黄金之路','').replace('冠军之战','').replace(' ','',2)
@@ -86,7 +88,7 @@ while True:
 		str2 = x[2].decode('gb2312', 'ignore').encode('utf-8')
 		url0 = str2
 		str3 = x[1].decode('gb2312', 'ignore').encode('utf-8')
-		print str102
+		print str102 
 		print url0
 		print str3
 		print os.getcwd() + '/xiaoshuo/' + str(name).zfill(5) + '.txt'

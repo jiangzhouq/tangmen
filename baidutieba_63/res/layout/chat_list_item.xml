@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/chat_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <RelativeLayout android:orientation="vertical" android:id="@id/list_control" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+        <TextView android:textSize="17.0sp" android:gravity="center" android:id="@id/list_control_tv" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" />
+        <ProgressBar android:id="@id/list_control_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:indeterminateDrawable="@drawable/progressbar" android:layout_toRightOf="@id/list_control_tv" android:layout_centerVertical="true" style="?android:attr/progressBarStyleSmall" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/list_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="@dimen/chatlist_item_photo_container_width" android:layout_height="@dimen/chatlist_item_photo_container_height">
+            <com.baidu.tieba.view.HeadImageView android:layout_gravity="center" android:id="@id/chat_head" android:layout_width="@dimen/chatlist_item_photo_width" android:layout_height="@dimen/chatlist_item_photo_height" android:scaleType="centerCrop" app:showGifTag="false" />
+            <TextView android:textSize="@dimen/default_size_16" android:gravity="center" android:layout_gravity="top|right|center" android:id="@id/new_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:singleLine="true" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/chat_content" android:padding="0.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="@dimen/chatlist_item_name_margintop" android:layout_marginBottom="@dimen/chatlist_item_name_marginbottom" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/default_size_24" android:gravity="center" android:id="@id/chat_name" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/default_size_21" android:ellipsize="end" android:gravity="left" android:id="@id/last_chat_content" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="2" android:layout_below="@id/chat_name" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+            <TextView android:textSize="@dimen/default_size_18" android:textColor="#ffb2b6ba" android:id="@id/chat_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/chatlist_item_name_margintop" android:layout_marginRight="@dimen/chatlist_item_right_padding" android:singleLine="true" />
+            <ImageView android:layout_gravity="bottom|right|center" android:id="@id/iv_bell" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/chatlist_item_bell_top" android:layout_marginRight="@dimen/chatlist_item_right_padding" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

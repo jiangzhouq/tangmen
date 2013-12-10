@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/sub_pb_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:tb_background="@color/pb_page_bg"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.ClickableLayout4Frame android:id="@id/sub_pb_body_layout" android:paddingBottom="@dimen/subpb_body_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/sub_pb_bottom_layout">
+        <com.baidu.adp.widget.ListView.BdListView android:scrollbarStyle="outsideOverlay" android:id="@id/new_sub_pb_list" android:paddingLeft="@dimen/subpb_body_margin_left" android:paddingRight="@dimen/subpb_body_margin_right" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/list_selector_transparent" android:cacheColorHint="@android:color/transparent" android:divider="#ff000000" android:dividerHeight="0.0dip" android:fastScrollEnabled="true" android:smoothScrollbar="true" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </com.baidu.tieba.view.ClickableLayout4Frame>
+    <LinearLayout android:orientation="vertical" android:id="@id/sub_pb_bottom_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/subpb_listitem_packup_min_height" android:layout_above="@id/hold" tb:tb_background="@color/sub_pb_packup_bg">
+        <View android:layout_gravity="top" android:id="@id/sub_pb_packup_divider" android:layout_width="fill_parent" android:layout_height="@dimen/subpb_listitem_packup_divider_height" tb:tb_background="@color/sub_pb_packup_divider_bg" />
+        <TextView android:textSize="@dimen/subpb_packup_text_size" android:gravity="center" android:layout_gravity="center" android:id="@id/sub_pb_bottom_text" android:layout_width="wrap_content" android:layout_height="@dimen/subpb_packup_text_height" android:text="@string/pack_up" android:drawableRight="@drawable/sub_pb_pack_up" android:drawablePadding="@dimen/subpb_packup_text_drawable_padding" tb:tb_textColor="@color/common_link_text" />
+    </LinearLayout>
+    <View android:id="@id/hold" android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_marginBottom="-1.0dip" android:layout_alignParentBottom="true" />
+    <com.baidu.tieba.pb.SubPbEditor android:orientation="vertical" android:id="@id/sub_pb_editor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/hold" />
+</RelativeLayout>

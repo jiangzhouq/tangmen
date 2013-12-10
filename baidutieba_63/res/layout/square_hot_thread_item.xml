@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/square_post_paddingLeftRight" android:paddingTop="@dimen/square_post_paddingTop" android:paddingRight="@dimen/square_post_paddingLeftRight" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <TextView android:textSize="@dimen/sqaure_post_title_text" android:gravity="center_vertical" android:id="@id/ht_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" tb:tb_textColor="@color/square_forum_barfolder_name" />
+    <TextView android:textSize="@dimen/sqaure_post_content_text" android:gravity="center_vertical" android:id="@id/ht_item_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/square_post_title_marginBottom" android:layout_marginBottom="@dimen/square_post_content_marginBottom" android:text="@string/forum_detail_ht_title" android:maxLines="2" tb:tb_textColor="@color/square_forum_barfolder_description" />
+    <View android:id="@id/post_recommend_line" android:layout_width="fill_parent" android:layout_height="1.0dip" tb:tb_background="@color/square_dividing_line" />
+    <FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/square_post_ht_marginTop">
+        <TextView android:textSize="@dimen/sqaure_post_info_text" android:gravity="center" android:layout_gravity="left|center" android:id="@id/ht_item_forum" android:layout_width="wrap_content" android:layout_height="wrap_content" tb:tb_textColor="@color/sqaure_post_info_text" />
+        <TextView android:textSize="@dimen/sqaure_post_info_text" android:gravity="center" android:layout_gravity="right|center" android:id="@id/ht_item_reply" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/square_post_reply_marginRight" android:drawablePadding="2.0dip" tb:tb_textColor="@color/sqaure_post_info_text" />
+    </FrameLayout>
+</LinearLayout>

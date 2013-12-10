@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <ImageView android:id="@id/record_glow" android:background="@drawable/bg_posts_record_zero_n" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/play_glow" android:background="@drawable/bg_posts_record_play_n" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.baidu.tieba.voice.VoiceBnt android:id="@id/voice_bnt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/but_posts_record_zero_selector" />
+    <ImageView android:id="@id/play_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/but_posts_record_play_selector" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff343b44" android:gravity="center" android:id="@id/restart" android:background="@drawable/but_posts_record_again_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/voice_restart" android:shadowColor="#ffffffff" android:shadowDy="1.0" android:shadowRadius="1.0" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/play_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    <ImageView android:id="@id/left_chanel" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/but_posts_record_left_zero_n" />
+    <ImageView android:id="@id/right_chanel" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/but_posts_record_right_zero_n" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/tip_error" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" tb:tb_background="@drawable/bg_posts_record" />
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff373e47" android:gravity="center" android:id="@id/tip_operator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#ff484e59" android:shadowDy="2.0" android:shadowRadius="1.0" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff2c3239" android:id="@id/tip_time_out" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/voice_record_timeout_tip" />
+</merge>

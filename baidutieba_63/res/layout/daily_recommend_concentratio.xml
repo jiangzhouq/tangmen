@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/father" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/head_div" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+        <TextView android:textSize="15.0sp" android:gravity="left|center" android:id="@id/title" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="title" android:singleLine="true" />
+        <com.baidu.tbadk.widget.TbImageView android:id="@id/img" android:layout_width="@dimen/daily_recommend_advice_width" android:layout_height="@dimen/daily_recommend_advice_height" android:layout_marginLeft="2.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="2.0dip" android:scaleType="centerCrop" />
+        <TextView android:textSize="13.0sp" android:id="@id/desc" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:maxLines="2" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/bottom_div" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip">
+        <TextView android:textSize="10.0sp" android:gravity="center_vertical" android:id="@id/count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" android:drawablePadding="4.0dip" android:layout_alignParentLeft="true" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true">
+            <TextView android:textSize="11.0sp" android:gravity="center_vertical" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:singleLine="true" android:drawablePadding="4.0dip" />
+            <TextView android:textSize="11.0sp" android:gravity="center_vertical" android:id="@id/bar_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="4.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

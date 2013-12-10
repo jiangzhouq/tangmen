@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <TextView android:layout_gravity="center_vertical" android:id="@id/enter_forum" android:background="@drawable/btn_jin_ba_s" android:layout_width="@dimen/enterforum_title_width" android:layout_height="@dimen/enterforum_title_height" android:text="@string/enter_forum" android:singleLine="true" android:layout_alignParentLeft="true" tb:tb_textColor="@drawable/im_enter_forum_tab_textcolor" style="@style/title_multi_textview" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/enter_group" android:background="@drawable/btn_jin_qun_n" android:layout_width="@dimen/enterforum_title_width" android:layout_height="@dimen/enterforum_title_height" android:text="@string/enter_group" android:singleLine="true" android:layout_toRightOf="@id/enter_forum" tb:tb_textColor="@drawable/im_enter_forum_tab_textcolor" style="@style/title_multi_textview" />
+    <ImageView android:id="@id/enter_group_new" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/enter_group" android:layout_alignParentTop="true" tb:tb_src="@drawable/icon_news_head_new" />
+</RelativeLayout>

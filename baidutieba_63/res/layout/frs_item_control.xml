@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/frs_list_control" android:paddingLeft="@dimen/frs_listmore_padding" android:paddingTop="@dimen/frs_listmore_padding" android:paddingRight="@dimen/frs_listmore_padding" android:paddingBottom="@dimen/frs_listmore_padding" android:visibility="gone" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/frs_list_control_in" android:focusable="false" android:layout_width="fill_parent" android:layout_height="@dimen/frs_listmore_height" android:layout_marginLeft="@dimen/frs_listmore_margin_left_right" android:layout_marginRight="@dimen/frs_listmore_margin_left_right">
+        <TextView android:textSize="@dimen/frs_listmore_text" android:id="@id/frs_list_control_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" tb:tb_textColor="@color/frs_listmore_text" style="@style/text_info" />
+        <ProgressBar android:id="@id/frs_list_control_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/frs_listmore_progressbar_margin_left" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleSmall" />
+    </LinearLayout>
+</FrameLayout>

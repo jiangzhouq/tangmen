@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baidu.tieba.view.KeyboardEventLayout android:id="@id/pb_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:tb_background="@color/pb_page_bg"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.baidu.tieba.view.NoNetworkView android:id="@id/view_no_network" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/view_navigation_bar" tb:tb_background="@drawable/bg_no_network" />
+    <com.baidu.adp.widget.ListView.BdListView android:id="@id/new_pb_list" android:padding="0.0px" android:fadingEdge="vertical" android:fadingEdgeLength="@dimen/pb_listview_fadingedge_length" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="#ff000000" android:dividerHeight="0.0dip" android:layout_above="@id/pb_editor_view" android:layout_below="@id/view_no_network" android:fastScrollEnabled="false" android:smoothScrollbar="true" tb:tb_background="@color/pb_page_bg" />
+    <View android:id="@id/hold" android:layout_width="@dimen/pb_hold_width" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/pb_hold_margin_bottom" android:layout_alignParentBottom="true" />
+    <com.baidu.tieba.pb.PbEditor android:orientation="vertical" android:id="@id/pb_editor_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/hold" />
+</com.baidu.tieba.view.KeyboardEventLayout>

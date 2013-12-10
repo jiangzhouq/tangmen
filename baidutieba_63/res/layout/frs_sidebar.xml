@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scroll_view" android:background="@color/frs_slidebar_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:orientation="vertical" android:id="@id/show_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_top_height">
+            <FrameLayout android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/frs_slidebar_top_margin_top" android:layout_marginRight="@dimen/frs_slidebar_top_margin_right" android:layout_marginBottom="@dimen/frs_slidebar_top_margin_bottom">
+                <Button android:id="@id/side_like" android:background="@drawable/btn_broadside_add" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/frs_slidebar_top_btn_minwidth" android:minHeight="@dimen/frs_slidebar_top_btn_minheight" />
+                <TextView android:textSize="@dimen/frs_sliderbar_top_text" android:textColor="@color/frs_slidebar_text" android:gravity="center" android:layout_gravity="center" android:id="@id/side_like_tv" android:padding="@dimen/frs_slidebar_top_text_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attention_n" android:drawableLeft="@drawable/icon_broadside_add" android:drawablePadding="@dimen/frs_slidebar_top_text_drawablepadding" />
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:id="@id/show_title" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_title_height" android:text="@string/content" tb:tb_textColor="@color/frs_slidebar_title_text" style="@style/sidebar_title" />
+        <include layout="@layout/frs_sidebar_splitter" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/show_all" android:background="@drawable/frs_sidebar_click" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_content_height">
+            <TextView android:id="@id/show_all_text" android:paddingLeft="@dimen/frs_slidebar_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_all" tb:tb_style="@style/sidebar_content" />
+        </LinearLayout>
+        <include layout="@layout/frs_sidebar_splitter" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/show_good" android:background="@drawable/frs_sidebar_click" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_content_height">
+            <TextView android:id="@id/show_good_text" android:paddingLeft="@dimen/frs_slidebar_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_good" tb:tb_style="@style/sidebar_content" />
+        </LinearLayout>
+        <include layout="@layout/frs_sidebar_splitter" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/show_image" android:background="@drawable/frs_sidebar_click" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_content_height">
+            <TextView android:id="@id/show_image_text" android:paddingLeft="@dimen/frs_slidebar_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_image" tb:tb_style="@style/sidebar_content" />
+        </LinearLayout>
+        <include layout="@layout/frs_sidebar_splitter" />
+        <TextView android:id="@id/setting_title" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_title_height" android:text="@string/setup" tb:tb_textColor="@color/frs_slidebar_title_text" style="@style/sidebar_title" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/thrift_mode" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_content_height">
+            <TextView android:id="@id/thrift_mode_text" android:paddingLeft="@dimen/frs_slidebar_padding_left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/image_show_setting" android:layout_weight="1.0" tb:tb_style="@style/sidebar_content" />
+            <com.baidu.adp.widget.BdSwitchView.BdSwitchView android:id="@id/thrift_mode_switch" android:paddingRight="@dimen/frs_slidebar_switch_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <include layout="@layout/frs_sidebar_splitter" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/eyeshield_mode" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_content_height">
+            <TextView android:id="@id/eyeshield_mode_text" android:paddingLeft="@dimen/frs_slidebar_padding_left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/eyeshield_mode" android:layout_weight="1.0" tb:tb_style="@style/sidebar_content" />
+            <com.baidu.adp.widget.BdSwitchView.BdSwitchView android:id="@id/eyeshield_mode_switch" android:paddingRight="@dimen/frs_slidebar_switch_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <include layout="@layout/frs_sidebar_splitter" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/add_to_window_layout" android:background="@drawable/frs_sidebar_click" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_content_height">
+            <TextView android:id="@id/add_to_window" android:paddingLeft="@dimen/frs_slidebar_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_to_window" tb:tb_style="@style/sidebar_content" />
+        </LinearLayout>
+        <include layout="@layout/frs_sidebar_splitter" />
+        <LinearLayout android:orientation="vertical" android:id="@id/inform_title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/inform_title" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_title_height" android:text="@string/inform" tb:tb_textColor="@color/frs_slidebar_title_text" style="@style/sidebar_title" />
+            <include layout="@layout/frs_sidebar_splitter" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/message_layout" android:background="@drawable/frs_sidebar_click" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_content_height">
+                <TextView android:id="@id/message_text" android:paddingLeft="@dimen/frs_slidebar_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_mention" tb:tb_style="@style/sidebar_content" />
+                <TextView android:textSize="@dimen/frs_sliderbar_message_text" android:gravity="center" android:id="@id/message_btn" android:background="@drawable/icon_news_head_prompt_one" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/frs_slidebar_message_margin_left" tb:tb_textColor="@color/frs_slidebar_message_text" />
+            </LinearLayout>
+            <include layout="@layout/frs_sidebar_splitter" />
+        </LinearLayout>
+        <TextView android:id="@id/like_forum_text" android:layout_width="fill_parent" android:layout_height="@dimen/frs_slidebar_title_height" android:text="@string/like_browser_bar" tb:tb_textColor="@color/frs_slidebar_title_text" style="@style/sidebar_title" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/like_forum_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

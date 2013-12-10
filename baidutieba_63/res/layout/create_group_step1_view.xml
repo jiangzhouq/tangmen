@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:orientation="vertical" android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/step1_img_bg" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="28.0dip" android:layout_marginTop="26.0dip" android:layout_marginRight="28.0dip" android:layout_marginBottom="26.0dip" tb:tb_background="@drawable/pic_found_name" />
+        <EditText android:id="@id/step1_group_name" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="14.0dip" android:hint="@string/group_create_step1_tip" android:singleLine="true" android:maxLength="20" tb:tb_background="@drawable/bg_found_information" tb:tb_textColor="@color/group_create_step_color" tb:tb_textColorHint="@color/group_create_color_hint" />
+    </LinearLayout>
+</ScrollView>

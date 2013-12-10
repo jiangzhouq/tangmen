@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="browser_SettingsActivityBackGround">#ffffffff</item>
+    <item type="drawable" name="browser_null_drawable">#00000000</item>
+    <item type="drawable" name="browser_search_bg_normal">#00000000</item>
+    <item type="drawable" name="browser_search_bg_press">#33000000</item>
+    <item type="drawable" name="white">#ffffffff</item>
+    <item type="drawable" name="kn_ladders_item_bg_pressed">#fff1f2f3</item>
+    <item type="drawable" name="forbid_list_divider">#ffe3e6e8</item>
+    <item type="drawable" name="forbid_list_divider_1">#ff262626</item>
+</resources>

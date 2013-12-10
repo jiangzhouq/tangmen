@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/forum_feed_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/nodata_img_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/forumfeed_nodata_image_margin_top" android:scaleType="fitXY" android:layout_centerHorizontal="true" tb:tb_background="@drawable/lead_homemetadata" />
+        <TextView android:textSize="@dimen/forumfeed_tip1_text" android:gravity="center" android:id="@id/tip1" android:paddingRight="@dimen/forumfeed_tip1_padding_right" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/forumfeed_tip1_margin_top" android:layout_marginBottom="@dimen/forumfeed_tip1_margin_bottom" android:text="@string/forum_feed_nodata_tip1" android:layout_below="@id/nodata_img_bg" tb:tb_textColor="@color/forumfeed_tip1_text" />
+        <TextView android:textSize="@dimen/forumfeed_tip2_text" android:gravity="center" android:id="@id/tip2" android:paddingLeft="@dimen/forumfeed_tip2_padding_left" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forum_feed_nodata_tip2" android:layout_below="@id/tip1" tb:tb_textColor="@color/forumfeed_tip2_text" />
+        <LinearLayout android:orientation="vertical" android:id="@id/content_with_data" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.baidu.tieba.view.NoNetworkView android:id="@id/view_no_network" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.baidu.adp.widget.ListView.BdListView android:id="@id/forum_feed_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="#00000000" android:dividerHeight="@dimen/listview_divider_height" android:fastScrollEnabled="false" android:smoothScrollbar="true" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/layout_btn_go" android:padding="@dimen/forumfeed_btngo_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tip2" android:layout_centerHorizontal="true">
+            <Button android:textSize="@dimen/forumfeed_btngo_text" android:gravity="center" android:id="@id/btn_go" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/forum_feed_goto_square" tb:tb_background="@drawable/btn_blue_square" tb:tb_textColor="@color/forumfeed_btngo_text" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

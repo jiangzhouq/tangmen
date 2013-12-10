@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:tb_background="@drawable/common_bg"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/view_navigation_bar">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.baidu.tieba.more.SettingTextSwitchView android:id="@id/sv_group_msg_notify" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" tb:settingText="@string/group_msg_notify" tb:tb_background="@drawable/more_all" />
+                <com.baidu.tieba.more.SettingTextSwitchView android:id="@id/sv_group_add_group" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" tb:settingText="@string/group_add_group_switch" tb:tb_background="@drawable/more_all" />
+                <com.baidu.tieba.more.SettingTextTipView android:id="@id/tv_change_name" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:settingText="@string/group_my_name" tb:tb_background="@drawable/more_down" />
+                <com.baidu.tieba.more.SettingTextTipView android:id="@id/sv_report" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" tb:settingText="@string/group_report_txt" tb:tb_background="@drawable/more_all" />
+                <Button android:gravity="center" android:id="@id/btn_dismiss" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:text="@string/group_dismiss" tb:tb_background="@drawable/more_all" tb:tb_textColor="@color/setting_text" />
+                <Button android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/btn_quit" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:text="@string/group_quit" tb:tb_background="@drawable/big_red_button" />
+            </LinearLayout>
+        </ScrollView>
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </FrameLayout>
+</RelativeLayout>

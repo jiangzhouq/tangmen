@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:setting="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:layout_below="@id/view_navigation_bar">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/image_logo" android:layout_width="123.0dip" android:layout_height="123.0dip" android:layout_marginTop="40.0dip" android:src="@drawable/setting_tieba_logo" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/c_262626" android:layout_gravity="center_horizontal" android:id="@id/text_versioninfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/text_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:src="@drawable/setting_logo_desc" />
+            <com.baidu.tieba.more.SettingTextTestNewView android:id="@id/about_version_update" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="10.0dip" setting:settingText="@string/check_version_update" />
+            <com.baidu.tieba.more.SettingTextFunctionIntroView android:id="@id/about_function_intro" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" setting:settingText="@string/setting_funtion_intro" />
+            <com.baidu.tieba.more.SettingTextTipView android:id="@id/about_guide" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" setting:settingText="@string/setting_goto_guide" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:textSize="9.0sp" android:textColor="@color/c_8e8e8e" android:id="@id/text_version_protoco" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/copyright" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <ProgressBar android:id="@id/about_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" android:layout_centerInParent="true" style="?android:attr/progressBarStyleInverse" />
+</RelativeLayout>

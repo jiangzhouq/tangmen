@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" tb:tb_background="@color/forumfeed_frs_bg"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.baidu.tieba.view.NoNetworkView android:id="@id/view_no_network" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.baidu.tieba.view.WaterFallView android:id="@id/water_fall" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </FrameLayout>
+</LinearLayout>

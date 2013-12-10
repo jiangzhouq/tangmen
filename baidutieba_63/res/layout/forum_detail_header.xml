@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.HeadImageView android:id="@id/h_forum_portrait" android:layout_width="75.0dip" android:layout_height="75.0dip" android:layout_marginLeft="10.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="10.0dip" android:layout_toRightOf="@id/h_forum_portrait">
+        <ImageView android:id="@id/h_forum_rank" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/default_size_24" android:id="@id/h_forum_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="8.0dip" android:maxLines="1" tb:tb_textColor="@color/fd_h_forum_title" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/h_forum_name">
+            <TextView android:textSize="@dimen/default_size_16" android:id="@id/h_fans_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forum_detail_fans" tb:tb_textColor="@color/fd_h_icon_text" />
+            <TextView android:textSize="@dimen/default_size_16" android:gravity="left" android:id="@id/h_fans_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" tb:tb_textColor="@color/fd_h_icon_num" />
+            <TextView android:textSize="@dimen/default_size_16" android:id="@id/h_thread_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forum_detail_thread" tb:tb_textColor="@color/fd_h_icon_text" />
+            <TextView android:textSize="@dimen/default_size_16" android:gravity="left" android:id="@id/h_thread_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" tb:tb_textColor="@color/fd_h_icon_num" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView android:id="@id/h_divider_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_below="@id/h_forum_portrait" android:layout_alignParentLeft="true" tb:tb_background="@color/forum_detail_sep_line" />
+</merge>

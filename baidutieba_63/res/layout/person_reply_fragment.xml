@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baidu.adp.widget.ListView.BdListView android:id="@id/listview_reply" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:smoothScrollbar="true" />
+        <TextView android:textSize="17.0sp" android:gravity="center_horizontal" android:id="@id/txt_listview_emptyview" android:paddingLeft="10.0dip" android:paddingTop="50.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/person_post_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-40.0dip" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+    </FrameLayout>
+</LinearLayout>

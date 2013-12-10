@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/sub_pb_more" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:gravity="center" android:paddingTop="@dimen/subpb_listitem_loadmore_padding_top" android:paddingBottom="@dimen/subpb_listitem_loadmore_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" tb:tb_background="@drawable/bg_floor_new_foot">
+        <TextView android:textSize="@dimen/subpb_listitem_loadmore_text_size" android:id="@id/sub_pb_more_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/load_more" tb:tb_textColor="@color/common_link_text" style="@style/text_shadow_style" />
+        <ImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pb_header_little_icon_drawable_padding" />
+        <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pb_header_little_icon_drawable_padding" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleSmall" />
+    </LinearLayout>
+</LinearLayout>

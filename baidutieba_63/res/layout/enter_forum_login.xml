@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/img_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" />
+        <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/tip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/login_block_tip" />
+        <LinearLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/login_btn" android:layout_width="0.0dip" android:layout_height="46.0dip" android:layout_marginRight="12.0dip" android:text="登录" android:layout_weight="1.0" />
+            <Button android:textSize="18.0dip" android:gravity="center" android:id="@id/reg_btn" android:layout_width="0.0dip" android:layout_height="46.0dip" android:text="注册" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

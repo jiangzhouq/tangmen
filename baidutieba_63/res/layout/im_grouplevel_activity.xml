@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:background="@color/enter_container_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/bg_grade_up" android:layout_width="fill_parent" android:layout_height="170.0dip">
+                    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip">
+                        <ImageView android:id="@id/level_image_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/icon_grade_big_star_n" />
+                        <ImageView android:id="@id/level_image_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/icon_grade_big_star_n" />
+                        <ImageView android:id="@id/level_image_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_grade_big_star_n" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/pic_grade_figure_left" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/c_40464f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/grouplevel_current_level" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/c_f15a23" android:id="@id/current_level" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_grade_figure_right" />
+                    </LinearLayout>
+                    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <LinearLayout android:orientation="horizontal" android:id="@id/grouplevel_active" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textSize="14.0sp" android:textColor="@color/c_40464f" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/grouplevel_active_day" />
+                            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/active_progress" android:layout_width="150.0dip" android:layout_height="16.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/im_activeday_progress" style="?android:attr/progressBarStyleHorizontal" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/c_f15a23" android:layout_gravity="center_vertical" android:id="@id/active_day_cur" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/home_abstract_txt" android:layout_gravity="center_vertical" android:id="@id/active_day_total" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <TextView android:textSize="14.0sp" android:textColor="@color/c_40464f" android:layout_gravity="center_vertical" android:id="@id/grouplevel_highest" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </FrameLayout>
+                    <TextView android:textSize="12.0sp" android:textColor="@color/c_f15a23" android:layout_gravity="center_horizontal" android:id="@id/active_condition" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/c_40464f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/grouplevel_level_intro" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <View android:background="@color/c_e3e6e8" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/home_abstract_txt" android:gravity="center" android:background="@color/c_f6f7f7" android:layout_width="56.0dip" android:layout_height="41.0dip" android:text="@string/grouplevel_level_1" />
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                            <ImageView android:id="@id/level_image_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:src="@drawable/icon_grade_middle_star_s" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/icon_grade_middle_star_n" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/icon_grade_middle_star_n" android:scaleType="fitStart" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/home_abstract_txt" android:id="@id/group_max1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" />
+                            <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                        </LinearLayout>
+                        <View android:background="@color/c_e3e6e8" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/home_abstract_txt" android:gravity="center" android:background="@color/c_f6f7f7" android:layout_width="56.0dip" android:layout_height="41.0dip" android:text="@string/grouplevel_level_2" />
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:src="@drawable/icon_grade_middle_star_s" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/icon_grade_middle_star_s" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/icon_grade_middle_star_n" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/home_abstract_txt" android:id="@id/group_max2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" />
+                            <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                        </LinearLayout>
+                        <View android:background="@color/c_e3e6e8" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/home_abstract_txt" android:gravity="center" android:background="@color/c_f6f7f7" android:layout_width="56.0dip" android:layout_height="41.0dip" android:text="@string/grouplevel_level_3" />
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:src="@drawable/icon_grade_middle_star_s" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/icon_grade_middle_star_s" />
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/icon_grade_middle_star_s" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/home_abstract_txt" android:id="@id/group_max3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" />
+                            <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                            <View android:background="@color/c_e3e6e8" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+                        </LinearLayout>
+                        <View android:background="@color/c_e3e6e8" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" style="?android:attr/progressBarStyleInverse" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baidu.tieba.view.NoPressedLinearLayout android:orientation="vertical" android:id="@id/sub_pb_item" android:paddingTop="@dimen/subpb_listitem_padding_top" android:paddingBottom="@dimen/subpb_listitem_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/subpb_list_item_minheight"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.adp.widget.ColumnLayout android:orientation="horizontal" android:id="@id/sub_pb_item_columnlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" tb:spacingLeft="@dimen/subpb_listitem_margin_left" tb:spacingRight="@dimen/subpb_listitem_margin_right">
+        <com.baidu.tieba.view.HeadImageView android:id="@id/photo" android:focusable="false" android:clickable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:scaleType="centerCrop" tb:layout_column="1" />
+        <com.baidu.tbadk.widget.richText.TbRichTextView android:id="@id/richText" android:layout_width="fill_parent" android:layout_height="wrap_content" tb:layout_column="2" />
+        <TextView android:textSize="@dimen/default_size_14" android:id="@id/time" android:layout_width="fill_parent" android:layout_height="wrap_content" tb:layout_column="2" tb:tb_textColor="@color/subpb_listitem_time" />
+        <Button android:layout_gravity="top|right|center" android:id="@id/manage_btn" android:background="@null" android:padding="10.0dip" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/pb_ico_button_manage_n" tb:layout_column="3" />
+    </com.baidu.adp.widget.ColumnLayout>
+</com.baidu.tieba.view.NoPressedLinearLayout>

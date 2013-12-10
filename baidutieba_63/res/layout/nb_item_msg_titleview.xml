@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/default_size_22" android:gravity="center" android:id="@id/chatme_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mention_chatme" android:singleLine="true" />
+        <TextView android:id="@id/chatme_msg_num" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/title_multi_textview_msg_num" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/default_size_22" android:gravity="center" android:id="@id/replyme_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mention_replyme" android:singleLine="true" />
+        <TextView android:id="@id/replyme_msg_num" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/title_multi_textview_msg_num" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/default_size_22" android:gravity="center" android:id="@id/atme_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mention_atme" android:singleLine="true" />
+        <TextView android:id="@id/atme_msg_num" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/title_multi_textview_msg_num" />
+    </RelativeLayout>
+</LinearLayout>

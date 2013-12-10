@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/no_network_parent" android:layout_width="fill_parent" android:layout_height="45.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <ImageView android:id="@id/no_network_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_centerVertical="true" tb:tb_src="@drawable/icon_error" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/no_network_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="14.0sp" android:id="@id/no_network_guide1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_network_guide1" tb:tb_textColor="@color/no_network_guide1" />
+        <TextView android:textSize="12.0sp" android:id="@id/no_network_guide2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_network_guide2" tb:tb_textColor="@color/no_network_guide2" />
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/no_network_showmore" android:layout_width="75.0dip" android:layout_height="25.0dip" android:layout_marginRight="10.0dip" android:text="@string/no_network_guide_more" android:layout_alignParentRight="true" android:layout_centerVertical="true" tb:tb_background="@drawable/network_more" tb:tb_textColor="@color/no_network_showmore" />
+</merge>

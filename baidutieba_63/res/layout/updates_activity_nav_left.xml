@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/update_left" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <ImageView android:id="@id/back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="center" tb:tb_background="@drawable/title_icon_bg" tb:tb_src="@drawable/icon_return_n" style="@style/navi_btn_bg_comm" />
+    <Button android:layout_gravity="center_vertical" android:id="@id/btn_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/del_post" android:layout_alignParentLeft="true" android:layout_centerVertical="true" tb:tb_background="@drawable/btn_delete_groupupdates" style="@style/title_comm" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="1200.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:id="@id/head_ly" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginTop="-81.0dip" />
+    <FrameLayout android:id="@id/foot_ly" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="@dimen/jigsawSelectedWidth" android:layout_height="@dimen/jigsawSelectedHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:layout_width="@dimen/jigsawSelectedImageWidth" android:layout_height="@dimen/jigsawSelectedImageWidth" android:layout_marginLeft="10.0dip" android:layout_marginTop="12.0dip" android:scaleType="centerCrop" />
+    <ImageView android:background="@drawable/motu_jisaw_del_ccircle" android:layout_width="@dimen/jigsawDelWidth" android:layout_height="@dimen/jigsawDelWidth" />
+</RelativeLayout>

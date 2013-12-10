@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/host" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <LinearLayout android:orientation="horizontal" android:id="@id/box_btns" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btn_edit_profile" android:clickable="true" android:layout_width="@dimen/person_center_btn_width" android:layout_height="@dimen/person_center_btn_height">
+            <ImageView android:id="@id/edit_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_center_btn_margin_left" tb:tb_src="@drawable/icon_pop_edit" />
+            <TextView android:textSize="@dimen/person_centerbtn_font" android:id="@id/edit_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_edit_margin_left" android:layout_marginRight="@dimen/person_center_btntext_margin_right" android:text="@string/edit_profile" tb:tb_textColor="@color/person_edit" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/person_centerbtn_font" android:id="@id/btn_account_exception" android:paddingLeft="@dimen/person_account_exception_padding_left" android:paddingTop="@dimen/person_account_exception_padding_top" android:paddingRight="@dimen/person_account_exception_padding_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/person_center_btn_height" android:layout_marginLeft="@dimen/person_center_btntext_margin_left" android:layout_marginRight="@dimen/person_center_btntext_margin_right" android:text="@string/btn_account_exception" tb:tb_background="@drawable/btn_white_bg_selector" tb:tb_textColor="@color/person_edit" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/sudoku_buttons_host" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_bigbtn_margin" android:layout_marginRight="@dimen/person_bigbtn_margin">
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/my_bookmark" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/my_bookmark_image" tb:tb_src="@drawable/icon_pop_collect" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/my_bookmark_text" android:text="@string/my_mark" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/my_bookmark_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+                <ImageView android:gravity="center" android:layout_gravity="top|right|center" android:id="@id/new_bookmark_mention" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/person_btnicon_margin_top" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/new_version" />
+            </RelativeLayout>
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/my_forums" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/my_forums_image" tb:tb_src="@drawable/icon_pop_ba" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/my_forums_text" android:text="@string/my_forums" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/my_forums_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/my_post" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/my_post_image" tb:tb_src="@drawable/icon_pop_tiezi" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/my_post_text" android:text="@string/my_post" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/my_post_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/person_bigbtn_margin" android:layout_marginRight="@dimen/person_bigbtn_margin">
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/my_attention" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/my_attention_image" tb:tb_src="@drawable/icon_pop_eye" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/my_attention_text" android:text="@string/my_attention" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/my_attention_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:id="@id/my_fans" tb:tb_background="@drawable/person_button" style="@style/personal_big_button">
+                    <ImageView android:id="@id/my_fans_image" tb:tb_src="@drawable/icon_pop_fans" style="@style/personal_big_button_icon" />
+                    <TextView android:id="@id/my_fans_text" android:text="@string/my_fans" tb:tb_textColor="@color/person_sudoku_big" style="@style/personal_big_button_text" />
+                    <TextView android:id="@id/my_fans_num" tb:tb_textColor="@color/person_sudoku_small" style="@style/personal_big_button_text_number" />
+                </LinearLayout>
+                <TextView android:id="@id/new_fans_mention" style="@style/personal_big_button_text_new_number" />
+            </RelativeLayout>
+            <RelativeLayout style="@style/personal_big_button_panel">
+                <LinearLayout android:orientation="vertical" android:id="@id/place_holder1" style="@style/personal_big_button" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

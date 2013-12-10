@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/guide_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center" android:id="@id/guide_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" />
+        <TextView android:textSize="16.0sp" android:textColor="#ffb2b6ba" android:gravity="center" android:id="@id/guide_tip1" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/forum_not_like_tip" />
+        <TextView android:textSize="16.0sp" android:textColor="#ffb2b6ba" android:gravity="center" android:id="@id/guide_tip2" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forum_not_like_tip" />
+    </LinearLayout>
+</RelativeLayout>

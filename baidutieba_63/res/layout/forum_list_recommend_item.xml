@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/square_page_padding" android:paddingRight="@dimen/square_page_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NoPressedLinearLayout android:layout_gravity="center_vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="@dimen/square_forum_list_height">
+        <TextView android:textSize="@dimen/square_forum_list_title_text" android:gravity="center_vertical" android:id="@id/forum_list_title_1" android:paddingLeft="@dimen/square_forum_list_text_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" tb:tb_background="@drawable/forum_list_recommend_selector" tb:tb_textColor="@color/square_forum_list_title_text" />
+        <View android:layout_gravity="center_vertical" android:id="@id/forum_list_title_divider" android:layout_width="@dimen/square_forum_list_divider_width" android:layout_height="@dimen/square_forum_list_divider_height" tb:tb_background="@color/square_forum_list_dvider" />
+        <TextView android:textSize="@dimen/square_forum_list_title_text" android:gravity="center_vertical" android:id="@id/forum_list_title_2" android:paddingLeft="@dimen/square_forum_list_text_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" tb:tb_background="@drawable/forum_list_recommend_selector" tb:tb_textColor="@color/square_forum_list_title_text" />
+    </com.baidu.tieba.view.NoPressedLinearLayout>
+</LinearLayout>

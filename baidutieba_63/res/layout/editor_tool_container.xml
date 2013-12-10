@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.tieba.editortool.FaceView android:gravity="center" android:id="@id/face_view" android:background="@color/editor_tool_container_bg" android:focusable="false" android:visibility="gone" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_faceview_height" android:horizontalSpacing="@dimen/pb_editor_faceview_horizontal_spacing" android:verticalSpacing="@dimen/pb_editor_faceview_vertical_spacing" android:stretchMode="columnWidth" android:columnWidth="@dimen/pb_editor_faceview_spacing_width" android:numColumns="auto_fit" />
+    <com.baidu.tieba.voice.RecordVoiceBnt android:id="@id/record_voice_view" android:background="@color/editor_tool_container_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_recordview_height" />
+    <com.baidu.tieba.editortool.ImageUploadView android:id="@id/image_upload_view" android:background="@color/editor_tool_container_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/pb_editor_imageupload_height" />
+</merge>

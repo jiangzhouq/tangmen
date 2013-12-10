@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/alert_dialog_bj" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_title" android:background="@drawable/titlebar_bg_1" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="18.0sp" android:textColor="#ff666666" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/group_card_share_title" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="14.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <ImageView android:id="@id/share_weixin" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/icon_weixin_big" android:scaleType="fitXY" />
+            <ImageView android:id="@id/share_qqfriend" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/icon_friend_big" android:scaleType="fitXY" />
+            <ImageView android:id="@id/share_qqzone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/icon_qqzon_big" android:scaleType="fitXY" />
+            <ImageView android:id="@id/share_sina" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/icon_sina_big" android:scaleType="fitXY" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/rl_bottom" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <Button android:textSize="16.0sp" android:textColor="#ff444343" android:id="@id/btn_cancel" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="2.0dip" android:text="@string/group_card_share_cancel" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

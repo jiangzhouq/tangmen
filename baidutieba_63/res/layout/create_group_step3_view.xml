@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/step3_img_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="28.0dip" android:layout_marginTop="26.0dip" android:layout_marginRight="28.0dip" android:layout_marginBottom="26.0dip" tb:tb_background="@drawable/pic_found_pop" />
+        <com.baidu.tieba.view.HeadImageView android:layout_gravity="center" android:id="@id/step3_img_scr" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_marginLeft="-3.0dip" android:layout_marginTop="-40.0dip" android:scaleType="fitCenter" tb:isRadius="false" tb:showGifTag="false" />
+    </FrameLayout>
+    <Button android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/create_group3" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="10.0dip" android:text="@string/group_create_step3_tip" tb:tb_background="@drawable/btn_blue_square" tb:tb_textColor="@color/home_btngo_txt" />
+</LinearLayout>

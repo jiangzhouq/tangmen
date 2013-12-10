@@ -1,0 +1,20 @@
+{
+    "client_ids" : {
+        "baidu" : "rkybkSDMQO5k2aVVInLq3uXm",
+        "sinaweibo" : "3826995480",
+        "qqdenglu" : "100312028",
+        "qqweibo" : "801420872",
+        "weixin" : "wx289a8c58bca4c71e",
+        "weixin_timeline" : "wx289a8c58bca4c71e",
+        "renren" : "242017"
+    },
+    "client_names" : {
+        "sinaweibo" : "百度贴吧",
+        "qqdenglu" : "百度贴吧",
+        "qqweibo" : "百度贴吧",
+        "weixin" : "百度贴吧",
+        "weixin_timeline" : "百度贴吧",
+        "renren" : "百度贴吧"
+    },
+    "sso_medias" : ["sinaweibo","qqdenglu"]
+}

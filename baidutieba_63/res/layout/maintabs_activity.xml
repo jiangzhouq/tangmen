@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/tabcontent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/bottom_container" android:background="@color/maintab_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_radio" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/radio_recommend" android:text="@string/homepage" android:drawableTop="@drawable/tabs_recommend" style="@style/main_tab_bottom" />
+            <RadioButton android:id="@id/radio_home" android:text="@string/home" android:drawableTop="@drawable/tabs_home" style="@style/main_tab_bottom" />
+            <RadioButton android:id="@id/radio_square" android:text="@string/square" android:drawableTop="@drawable/tabs_square" style="@style/main_tab_bottom" />
+            <RadioButton android:id="@id/radio_message" android:text="@string/remind" android:drawableTop="@drawable/tabs_message" style="@style/main_tab_bottom" />
+            <RadioButton android:id="@id/radio_person_info" android:text="@string/person_info" android:drawableTop="@drawable/tabs_search" style="@style/main_tab_bottom" />
+        </RadioGroup>
+        <TextView android:textSize="@dimen/default_size_16" android:textColor="#fffffefe" android:gravity="center" android:layout_gravity="top|left|center" android:id="@id/message_person" android:background="@drawable/message_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:text="" />
+        <TextView android:textSize="@dimen/default_size_16" android:textColor="#fffffefe" android:gravity="center" android:layout_gravity="top|left|center" android:id="@id/message_message" android:background="@drawable/message_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:text="" />
+        <ImageView android:gravity="center" android:layout_gravity="top|right|center" android:id="@id/new_version_logo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/icon_news_down_bar_one" android:contentDescription="@string/new_version" />
+        <ImageView android:gravity="center" android:layout_gravity="top|right|center" android:id="@id/new_recommends_logo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/icon_news_down_bar_one" android:contentDescription="@string/new_version" />
+        <ImageView android:gravity="center" android:layout_gravity="top" android:id="@id/new_bookmark_logo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:contentDescription="@string/new_version" />
+    </FrameLayout>
+</LinearLayout>

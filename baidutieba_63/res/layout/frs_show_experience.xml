@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/experience_container" android:paddingTop="@dimen/frs_header_exp_text_paddingTop" android:layout_width="wrap_content" android:layout_height="wrap_content" tb:tb_background="@drawable/icon_frs_experience_number"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <TextView android:textSize="@dimen/frs_header_exp_text" android:id="@id/experience" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/experience" tb:tb_textColor="@color/frs_header_exp_text" />
+    <TextView android:textSize="@dimen/frs_header_exp_text" android:id="@id/cur_experience" android:layout_width="wrap_content" android:layout_height="wrap_content" tb:tb_textColor="@color/frs_header_exp_num_text" />
+    <TextView android:textSize="@dimen/frs_header_exp_text" android:id="@id/levelup_experience" android:layout_width="wrap_content" android:layout_height="wrap_content" tb:tb_textColor="@color/frs_header_exp_text" />
+</LinearLayout>

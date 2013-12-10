@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="15.0sp" android:gravity="center" android:id="@id/signallforum_item_warning" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" tb:tb_textColor="@color/signallforum_item_name"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba" />

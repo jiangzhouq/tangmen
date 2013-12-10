@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.baidu.tieba.view.SearchBoxView android:id="@id/view_searchbox" android:layout_width="fill_parent" android:layout_height="@dimen/search_tab_height" tb:tb_background="@color/search_box_bg" />
+    <FrameLayout android:id="@id/lv_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baidu.tieba.home.EnterForumGuideCenterView android:layout_gravity="bottom" android:id="@id/lv_guid_center_root" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.baidu.tieba.home.EnterForumGuideBottomView android:gravity="bottom" android:id="@id/lv_guide_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/enterforum_guidebottom_margin_top" android:layout_marginBottom="@dimen/enterforum_guidebottom_margin_bottom" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.baidu.tieba.view.NoNetworkView android:id="@id/view_no_network" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.baidu.adp.widget.ListView.BdListView android:id="@id/enter_forum_lv_forum" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:smoothScrollbar="true" />
+            <com.baidu.adp.widget.ListView.BdListView android:id="@id/enter_group_lv_forum" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:smoothScrollbar="true" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

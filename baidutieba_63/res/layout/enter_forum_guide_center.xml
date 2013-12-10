@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/img_box" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/img_bg_center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="#ffb2b6ba" android:gravity="center" android:id="@id/tip_no_center" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forum_not_like_tip" android:layout_below="@id/img_box" android:lineSpacingExtra="5.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffb2b6ba" android:gravity="center" android:id="@id/tip_center" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/forum_block_tip" android:layout_below="@id/tip_no_center" />
+    <ImageView android:id="@id/arrows_center" android:paddingRight="65.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/pic_arrows" android:scaleType="fitXY" android:layout_below="@id/tip_center" android:layout_centerHorizontal="true" />
+</merge>

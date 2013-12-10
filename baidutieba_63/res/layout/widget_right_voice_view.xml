@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="5.0dip">
+        <ImageView android:id="@id/img_voice_readed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/icon_chat_dot" android:layout_alignParentTop="true" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:id="@id/tex_voice_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/lay_bubble" android:background="@drawable/selector_msg_text_bubble_me" android:layout_width="60.0dip" android:layout_height="wrap_content">
+        <ImageView android:id="@id/img_voice_status" android:background="@drawable/icon_chat_reply_three" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/img_voice_status_anim" android:background="@anim/im_voice_btn_play_anim_r" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyleSmall" />
+    </RelativeLayout>
+</LinearLayout>

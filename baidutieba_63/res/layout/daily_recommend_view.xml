@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.tieba.view.NavigationBar android:id="@id/view_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/view_navigation_bar">
+        <com.baidu.adp.widget.PinnedHeaderListView android:id="@id/pinnedHeaderListview" android:scrollbars="vertical" android:fadingEdgeLength="3.0dip" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@null" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" android:fastScrollEnabled="false" />
+        <TextView android:textSize="12.0sp" android:gravity="center" android:layout_gravity="top" android:id="@id/text_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="27.0dip" android:text="今日精选已更新" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</RelativeLayout>

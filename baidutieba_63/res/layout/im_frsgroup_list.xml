@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baidu.tieba.im.frsgroup.InitGuideView android:id="@id/group_guide" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.baidu.adp.widget.ListView.BdListView android:id="@id/group_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@drawable/list_divider" android:smoothScrollbar="true" />
+        <Button android:textColor="@color/white" android:id="@id/guide_create" android:background="@drawable/btn_blue_square" android:visibility="gone" android:layout_width="290.0dip" android:layout_height="44.0dip" android:layout_marginTop="20.0dip" android:text="@string/frsgroup_official_create_group" android:layout_below="@id/group_guide" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

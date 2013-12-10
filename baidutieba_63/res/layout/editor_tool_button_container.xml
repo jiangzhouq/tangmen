@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tb="http://schemas.android.com/apk/res/com.baidu.tieba">
+    <com.baidu.tieba.editortool.EditorToolButton android:enabled="false" android:id="@id/select_face" android:clickable="true" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentLeft="true" tb:tb_src="@drawable/write_face" />
+    <com.baidu.tieba.editortool.EditorToolButton android:enabled="false" android:id="@id/select_at" android:clickable="true" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="10.0dip" android:layout_toRightOf="@id/select_face" tb:tb_src="@drawable/write_at" />
+    <com.baidu.tieba.editortool.EditorToolButton android:enabled="false" android:id="@id/select_image" android:clickable="true" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="10.0dip" android:layout_toRightOf="@id/select_at" tb:tb_src="@drawable/write_image" />
+    <com.baidu.tieba.editortool.EditorToolButton android:enabled="false" android:id="@id/select_audio" android:clickable="true" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="10.0dip" android:layout_toRightOf="@id/select_image" tb:tb_src="@drawable/write_audio" />
+</merge>
