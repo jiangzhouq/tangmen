@@ -40,9 +40,10 @@ print b.list_objects_raw(prefix='', start=0, limit=100)
 #b.make_public()
 
 #声明一个object
-o = b.object('/custom.jpg')
-
-o.put_file('/home/jiangzhouq/Pictures/custom.jpg', headers={})
+for atext in os.listdir('/home/jiangzhouq/Documents/github/tangmen/Baidu-BCS-SDK-Python-1.3.2/xiaoshuo/'):
+	print os.path.basename(atext)
+	o = b.object('/' + os.path.basename(atext))
+	o.put_file('/home/jiangzhouq/Documents/github/tangmen/Baidu-BCS-SDK-Python-1.3.2/xiaoshuo/' + os.path.basename(atext), headers={})
 
 #在bcs 上删除.
 #o.delete()

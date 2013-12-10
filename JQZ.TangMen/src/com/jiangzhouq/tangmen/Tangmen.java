@@ -11,7 +11,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.baidu.frontia.Frontia;
 import com.baidu.frontia.FrontiaFile;
+import com.baidu.frontia.api.FrontiaPush;
 import com.baidu.frontia.api.FrontiaStorage;
 import com.baidu.frontia.api.FrontiaStorageListener.FileListListener;
 import com.baidu.frontia.api.FrontiaStorageListener.FileProgressListener;
@@ -33,13 +35,18 @@ public class Tangmen extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tangmen);
-//		boolean isInit = Frontia.init(getApplicationContext(),
-//				"7q6l1grGD7pYFoDG3pEKTxwE");
-//		if (isInit) {
-//			if (LOG_SWITCH)
-//				Log.d(LOG_TAG, "Frontia init successfully!");
-//		}
-//		mCloudStorage = Frontia.getStorage();
+		boolean isInit = Frontia.init(getApplicationContext(),
+				"7q6l1grGD7pYFoDG3pEKTxwE");
+		if (isInit) {
+			if (LOG_SWITCH)
+				Log.d(LOG_TAG, "Frontia init successfully!");
+		}
+		mCloudStorage = Frontia.getStorage();
+		FrontiaPush mPush = Frontia.getPush();
+		List<String> tags = new ArrayList<String>();
+		tags.add("tangmen");
+		mPush.setTags(tags);
+		mPush.start();
 //		list();
 	    UmengUpdateAgent.update(this);
 	}
