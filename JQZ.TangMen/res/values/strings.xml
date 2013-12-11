@@ -9,4 +9,7 @@
     <string name="comment">Your Comments</string>
     <string name="feedback">Contact Author</string>
     <string name="update">Update</string>
+    <string name="sync">Sync</string>
+    <string name="sync_checking">Checking the Update</string>
+    <string name="sync_doing">Updating %1$d</string>
 </resources>

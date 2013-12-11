@@ -9,6 +9,9 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.frontia.Frontia;
@@ -30,24 +33,29 @@ public class Tangmen extends FragmentActivity {
 	FrontiaStorage mCloudStorage;
 	ArrayList<FrontiaFile> mTotalFile = new ArrayList<FrontiaFile>();
 	FrontiaFile mFile;
-	
+	TextView showSync;
+	int mDownloadFileCount = 0;
+	int mTotalFileCount = 0;
+	String sync_doing;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tangmen);
+		sync_doing = getResources().getString(R.string.sync_doing);
 		boolean isInit = Frontia.init(getApplicationContext(),
 				"7q6l1grGD7pYFoDG3pEKTxwE");
 		if (isInit) {
 			if (LOG_SWITCH)
 				Log.d(LOG_TAG, "Frontia init successfully!");
 		}
-		mCloudStorage = Frontia.getStorage();
+
 		FrontiaPush mPush = Frontia.getPush();
 		List<String> tags = new ArrayList<String>();
 		tags.add("tangmen");
 		mPush.setTags(tags);
 		mPush.start();
-//		list();
+
+		//check update
 	    UmengUpdateAgent.update(this);
 	}
 	@Override
@@ -70,6 +78,13 @@ public class Tangmen extends FragmentActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()){
+			case R.id.sync:
+				showSync = (TextView) findViewById(R.id.show_sync);
+				showSync.setVisibility(View.VISIBLE);
+				showSync.startAnimation(AnimationUtils.loadAnimation(this,android.R.anim.slide_in_left));
+				mCloudStorage = Frontia.getStorage();
+				list();
+				break;
 			case R.id.action_settings:
 				break;
 			case R.id.action_feedback:
@@ -97,6 +112,8 @@ public class Tangmen extends FragmentActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	protected void list() {
+		mDownloadFileCount = 0;
+		mTotalFileCount = 0;
 		mCloudStorage.listFiles(new FileListListener() {
 			@Override
 			public void onSuccess(List<FrontiaFile> list) {
@@ -108,13 +125,17 @@ public class Tangmen extends FragmentActivity {
 					mTotalFile.add(info);
 					sb.append(mRemotePath).append(" -> ").append(mNativePath).append('\n');
 				}
+				if(list.size() > 0 && null != showSync && showSync.VISIBLE == View.VISIBLE){
+					mTotalFileCount = list.size();
+					showSync.setText(String.format(sync_doing, mDownloadFileCount*100/mTotalFileCount));
+				}
 				if (LOG_SWITCH)
-					Log.d(LOG_TAG, "" + sb + "mTotalFile.size:" + mTotalFile.size());
+					Log.d(LOG_TAG, "mTotalFile.size:" + mTotalFile.size());
 				if(mTotalFile.size() > 0){
 					for(int i =0; i < mTotalFile.size(); i++){
-						if (LOG_SWITCH)
-							Log.d(LOG_TAG, "Start to download RemotePath" + mTotalFile.get(i).getRemotePath() + " Native path:" + mTotalFile.get(i).getNativePath());
-						downloadFile(mTotalFile.get(i));
+//						if (LOG_SWITCH)
+//							Log.d(LOG_TAG, "Start to download RemotePath" + mTotalFile.get(i).getRemotePath() + " Native path:" + mTotalFile.get(i).getNativePath());
+//						downloadFile(mTotalFile.get(i));
 					}
 					
 				}
@@ -144,6 +165,10 @@ public class Tangmen extends FragmentActivity {
 
 			@Override
 			public void onSuccess(String source, String newTargetName) {
+				mDownloadFileCount ++;
+				if(null != showSync && showSync.VISIBLE == View.VISIBLE){
+					showSync.setText(String.format(sync_doing, mDownloadFileCount) + mTotalFileCount);
+				}
 				if (LOG_SWITCH)
 					Log.d(LOG_TAG, source
 							+ " downloaded as "
