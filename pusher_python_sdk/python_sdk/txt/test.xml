@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tangmen>
+	<merges>
+		<merge file="10001" num="1" status="全" version="00001">001-100章</merge>
+	<merge file="10101" num="2" status="全" version="00001">101-200章</merge>
+	<merge file="10201" num="3" status="全" version="00001">201-300章</merge>
+	<merge file="10301" num="4" status="更新至:第三百一十五章 八强战开始！" version="00036">301-400章</merge>
+	</merges>
+<single>
+</single>
+</tangmen>

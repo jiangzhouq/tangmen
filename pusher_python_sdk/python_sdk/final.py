@@ -54,15 +54,16 @@ def perform():
 			if str1.count('#') < 1:	
 				if str2.count('章') > 0:
 					if str2.count('第') >0:
-#						print str1
-#						print str2
-						db.chapter.save(values)
-						global message
-						message = "{'title':'绝世唐门更新啦','description':'" + str2 +"','open_type': 1,'url': '"+str1 +"','user_confirm': 0}"
-#						print message
-						test_pushMessage_to_tag()
-						urlll = str1
-						finaladd.performDedail(urlll)
+						if str2.count('山寨') == 0:
+	#						print str1
+	#						print str2
+							db.chapter.save(values)
+							global message
+							message = "{'title':'绝世唐门更新啦','description':'" + str2 +"','open_type': 1,'url': '"+str1 +"','user_confirm': 0}"
+	#						print message
+							test_pushMessage_to_tag()
+							urlll = str1
+							finaladd.performDedail(urlll)
 	print 'Done!',"Current Time:", time.strftime("%Y-%m-%d %A %X %Z", time.localtime())
 
 def perthread(inc):
@@ -71,9 +72,9 @@ def perthread(inc):
 	t1 = threading.Thread(target=perform)
 	t1.setDaemon(True)
 	t1.start()
-	t1.join(15)
+	t1.join(55)
 
-def mymain(inc=20):
+def mymain(inc=60):
    s.enter(0,0,perthread,(inc,))
    s.run()
 

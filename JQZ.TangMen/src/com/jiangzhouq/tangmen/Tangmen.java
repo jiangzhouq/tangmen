@@ -19,6 +19,7 @@ import com.baidu.frontia.FrontiaFile;
 import com.baidu.frontia.api.FrontiaPush;
 import com.baidu.frontia.api.FrontiaStorage;
 import com.baidu.frontia.api.FrontiaStorageListener.FileListListener;
+import com.baidu.frontia.api.FrontiaStorageListener.FileOperationListener;
 import com.baidu.frontia.api.FrontiaStorageListener.FileProgressListener;
 import com.baidu.frontia.api.FrontiaStorageListener.FileTransferListener;
 import com.jiangzhouq.tangmen.data.Constants;
@@ -135,7 +136,7 @@ public class Tangmen extends FragmentActivity {
 					for(int i =0; i < mTotalFile.size(); i++){
 //						if (LOG_SWITCH)
 //							Log.d(LOG_TAG, "Start to download RemotePath" + mTotalFile.get(i).getRemotePath() + " Native path:" + mTotalFile.get(i).getNativePath());
-//						downloadFile(mTotalFile.get(i));
+						deleteFile(mTotalFile.get(i));
 					}
 					
 				}
@@ -185,6 +186,21 @@ public class Tangmen extends FragmentActivity {
 
 			}
 
+		});
+	}
+	protected void deleteFile(FrontiaFile file) {
+		mCloudStorage.deleteFile(file, new FileOperationListener() {
+			
+			@Override
+			public void onSuccess(String source) {
+				if (LOG_SWITCH)
+					Log.d(LOG_TAG, "deleted " + source);
+			}
+			
+			@Override
+			public void onFailure(String arg0, int arg1, String arg2) {
+				
+			}
 		});
 	}
 }

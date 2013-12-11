@@ -12,7 +12,10 @@ import sched,os,threading
 from xml.etree.ElementTree import ElementTree,Element
 import logging
 import pybcs 
-
+######################################################
+cmergednum = 4
+cmergedfile = 10301
+######################################################
 # 请修改这里
 AK = '7q6l1grGD7pYFoDG3pEKTxwE'           #请改为你的AK
 SK = 'tpTQFy3lK6mKG1yBVGH3lBitwUsfmjhY'        #请改为你的SK
@@ -21,21 +24,18 @@ bcs = pybcs.BCS('http://bcs.duapp.com/', AK, SK, pybcs.PyCurlHTTPC)
 url = 'http://tieba.baidu.com/p/2744503599'
 b = bcs.bucket(BUCKET)
  
-def prettyXml(element, indent, newline, level = 0): # elemnt为传进来的Elment类，参数indent用于缩进，newline用于换行    
-    if element:  # 判断element是否有子元素    
-        if element.text == None or element.text.isspace(): # 如果element的text没有内容    
+def prettyXml(element, indent, newline, level = 0):    
+    if element:  
+        if element.text == None or element.text.isspace():
             element.text = newline + indent * (level + 1)      
         else:    
             element.text = newline + indent * (level + 1) + element.text.strip() + newline + indent * (level + 1)    
-    #else:  # 此处两行如果把注释去掉，Element的text也会另起一行    
-        #element.text = newline + indent * (level + 1) + element.text.strip() + newline + indent * level    
-    temp = list(element) # 将elemnt转成list    
+    temp = list(element)  
     for subelement in temp:    
-        if temp.index(subelement) < (len(temp) - 1): # 如果不是list的最后一个元素，说明下一个行是同级别元素的起始，缩进应一致    
+        if temp.index(subelement) < (len(temp) - 1): 
             subelement.tail = newline + indent * (level + 1)    
-        else:  # 如果是list的最后一个元素， 说明下一行是母元素的结束，缩进应该少一个    
             subelement.tail = newline + indent * level    
-        prettyXml(subelement, indent, newline, level = level + 1) # 对子元素进行递归操作
+        prettyXml(subelement, indent, newline, level = level + 1)
 
 def read_xml(in_path):  
     '''''读取并解析xml文件 
@@ -51,8 +51,33 @@ def write_xml(tree, out_path):
        out_path: 写出路径'''  
     tree.write(out_path, encoding="utf-8",xml_declaration=True)
 
+def if_match(node, kv_map):  
+    '''''判断某个节点是否包含所有传入参数属性 
+       node: 节点 
+       kv_map: 属性及属性值组成的map'''  
+    for key in kv_map:  
+        if node.get(key) != kv_map.get(key):  
+            return False  
+    return True  
+
+def get_node_by_keyvalue(nodelist, kv_map):  
+    '''''根据属性及属性值定位符合的节点，返回节点 
+       nodelist: 节点列表 
+       kv_map: 匹配属性及属性值map'''  
+    result_nodes = []  
+    for node in nodelist:  
+        if if_match(node, kv_map):  
+            result_nodes.append(node)  
+    return result_nodes  
+
 def add_child_node(nodelist, element):  
     nodelist.append(element)  
+
+def find_nodes(tree, path):  
+    '''''查找某个路径匹配的所有节点 
+       tree: xml树 
+       path: 节点路径'''  
+    return tree.findall(path)
 
 def create_node(tag, property_map, content):  
     '''''新造一个节点 
@@ -76,22 +101,44 @@ def performDedail(urlll = url):
 		str2 = str2[num:len(str2)] + '未完待续)'
 #		print str1, str2
 		#1. 读取xml文件  
-		tree = read_xml("./test.xml")		
+		tree = read_xml("./txt/test.xml")		
 		#A. 找到父节点  
-		nodes = tree.getroot()
-		name = len(nodes.findall('chapter')) + 1
+		root = tree.getroot()
+		#找到single
+		single = root.find('single')
+		name = len(single.findall('chapter')) + 1
 		#A.新建节点  
 		a = create_node("chapter", {"file":str(name).zfill(5),"name":str1},str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())))  
 		#B.插入到父节点之下  
-		add_child_node(nodes, a)
-		prettyXml(nodes, '\t', '\n')
-		write_xml(tree, "./test.xml")
-		f = open(os.getcwd() + '/xiaoshuo/' + str(name).zfill(5) + '.txt','w')
-		f.write(str2)
-		f.close()
+		add_child_node(single, a)
+		#找到merges
+		merges = root.find('merges')
+		#找到num为4的merge
+		merge = get_node_by_keyvalue(merges, {"num":str(cmergednum)})[0]
+		#version+1
+		newversion = int(merge.get('version')) + 1
+		merge.set('version',str(newversion).zfill(5))
+		#更新至……
+		merge.set('status' ,'更新至:' + str1)
+		#格式化并保存
+		prettyXml(tree.getroot(), '\t', '\n')
+		write_xml(tree, "./txt/test.xml")
+		#新建单个章节txt
+		str22 = str2
+		f1 = open(os.getcwd() + '/txt/chapter/' + str(name).zfill(5) + '.txt','w')
+		f1.write(str2)
+		f1.close()
+		#合并当前章节
+		f2 = open(os.getcwd() + '/txt/merged/' + str(cmergedfile) + '.txt','a')
+		f2.write(str22)
+		f2.close()
+		##上传单个章节
 		o = b.object('/' + str(name).zfill(5) + '.txt')
-		o.put_file(os.getcwd() + '/xiaoshuo/' + str(name).zfill(5) + '.txt', headers={})
+		o.put_file(os.getcwd() + '/txt/chapter/' + str(name).zfill(5) + '.txt', headers={})
+		##上传xml文件
 		o = b.object('/test.xml')
-		o.put_file('/home/jiangzhouq/Documents/github/tangmen/pusher_python_sdk/python_sdk/test.xml', headers={})
-	print 'Done!',"Current Time:", time.strftime("%Y-%m-%d %A %X %Z", time.localtime())
-
+		o.put_file(os.getcwd() + '/txt/test.xml', headers={})
+		##上传merged总章
+		o = b.object('/' + str(cmergedfile) + '.txt')
+		o.put_file(os.getcwd() + '/txt/merged/' + str(cmergedfile) + '.txt', headers={})
+	print 'new added:',str1

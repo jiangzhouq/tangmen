@@ -1,0 +1,8 @@
+时间：每个月初 没过100章节的时候
+
+finaladd.py
+	修改注释里的两个数值
+test.xml
+	增加一个merge，完成的merge修改属性为“完”，删除全部chapter
+file
+	删除chapter下全部文件，完善下已完成的前100个章节
