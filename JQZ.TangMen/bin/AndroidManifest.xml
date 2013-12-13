@@ -56,6 +56,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.jiangzhouq.tangmen.SettingsActivity"
+            android:label="@string/menu_settings" >
+            <intent-filter>
+                <action android:name="android.intent.action.SettingsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <!-- Baidu receivers start-->
         <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
                   android:process=":bdservice_v1">

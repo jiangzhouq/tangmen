@@ -21,7 +21,7 @@ public class FeedbackActivity extends ConversationActivity{
 	public boolean onCreateOptionsMenu(Menu menu) {
 		
 		super.onCreateOptionsMenu(menu);
-		menu.add(Menu.NONE, Menu.FIRST + 1, 0, "设置").setIcon(R.drawable.umeng_fb_arrow_right).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+		menu.add(Menu.NONE, Menu.FIRST + 1, 0, "设置").setIcon(R.drawable.feedback_account).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		return true;
 	}
 	@Override

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">TangMen</string>
-    <string name="menu_settings">Settings</string>
-    <string name="action_settings">Settings</string>
-    <string name="user">Your Name</string>
-    <string name="email">Your Email</string>
-    <string name="comment">Your Comments</string>
-    <string name="feedback">Contact Author</string>
-    <string name="update">Update</string>
-    <string name="sync">Sync</string>
-    <string name="sync_checking">Checking the Update</string>
-    <string name="sync_doing">Updating %1$d</string>
+    <string name="app_name">唐门飞鸽</string>
+    <string name="menu_settings">设置</string>
+    <string name="action_settings">设置</string>
+    <string name="feedback">联系作者</string>
+    <string name="update">检查软件更新</string>
+    <string name="sync">同步</string>
+    <string name="sync_checking">正在检查更新</string>
+    <string name="sync_doing">正在更新 %1$d</string>
+    <string name="btn_month">本月</string>
+    <string name="btn_total">所有</string>
+    <string name="btn_settings">设置</string>
 </resources>

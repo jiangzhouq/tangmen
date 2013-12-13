@@ -10,7 +10,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.animation.AnimationUtils;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +30,7 @@ import com.umeng.update.UmengUpdateAgent;
 import com.umeng.update.UmengUpdateListener;
 import com.umeng.update.UpdateResponse;
 
-public class Tangmen extends FragmentActivity {
+public class Tangmen extends FragmentActivity implements OnClickListener{
 	private static final boolean LOG_SWITCH = Constants.LOG_SWITCH;
 	private static final String LOG_TAG = Constants.LOG_TAG;
 	FrontiaStorage mCloudStorage;
@@ -55,9 +57,15 @@ public class Tangmen extends FragmentActivity {
 		tags.add("tangmen");
 		mPush.setTags(tags);
 		mPush.start();
-
 		//check update
 	    UmengUpdateAgent.update(this);
+	    
+	    RelativeLayout btn_month = (RelativeLayout) findViewById(R.id.btn_month);
+	    btn_month.setOnClickListener(this);
+	    RelativeLayout btn_total = (RelativeLayout) findViewById(R.id.btn_total);
+	    btn_total.setOnClickListener(this);
+	    RelativeLayout btn_settings = (RelativeLayout) findViewById(R.id.btn_settings);
+	    btn_settings.setOnClickListener(this);
 	}
 	@Override
 	protected void onResume() {
@@ -70,47 +78,6 @@ public class Tangmen extends FragmentActivity {
 	protected void onPause() {
 		MobclickAgent.onPause(this);
 		super.onPause();
-	}
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.tangmen, menu);
-		return true;
-	}
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch(item.getItemId()){
-			case R.id.sync:
-				showSync = (TextView) findViewById(R.id.show_sync);
-				showSync.setVisibility(View.VISIBLE);
-				showSync.startAnimation(AnimationUtils.loadAnimation(this,android.R.anim.slide_in_left));
-				mCloudStorage = Frontia.getStorage();
-				list();
-				break;
-			case R.id.action_settings:
-				break;
-			case R.id.action_feedback:
-				startActivity(new Intent(this, FeedbackActivity.class));
-				break;
-			case R.id.action_update:
-				UmengUpdateAgent.forceUpdate(this);
-				UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
-			        @Override
-			        public void onUpdateReturned(int updateStatus,UpdateResponse updateInfo) {
-			            switch (updateStatus) {
-			            case 1: // has no update
-			                Toast.makeText(Tangmen.this, "没有更新", Toast.LENGTH_SHORT)
-			                        .show();
-			                break;
-			            case 3: // time out
-			                Toast.makeText(Tangmen.this, "超时", Toast.LENGTH_SHORT)
-			                        .show();
-			                break;
-			            }
-			        }
-			});
-				break;
-		}
-		return super.onOptionsItemSelected(item);
 	}
 	protected void list() {
 		mDownloadFileCount = 0;
@@ -202,5 +169,13 @@ public class Tangmen extends FragmentActivity {
 				
 			}
 		});
+	}
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
+		case R.id.btn_settings:
+			startActivity(new Intent(this, SettingsActivity.class));
+			break;
+		}
 	}
 }
