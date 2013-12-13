@@ -4,8 +4,10 @@
 		<merge file="10001" num="1" status="全" version="00001">001-100章</merge>
 	<merge file="10101" num="2" status="全" version="00001">101-200章</merge>
 	<merge file="10201" num="3" status="全" version="00001">201-300章</merge>
-	<merge file="10301" num="4" status="更新至:第三百一十五章 八强战开始！" version="00036">301-400章</merge>
+	<merge file="10301" num="4" status="更新至:第三百一十七章 太阳沐浴、黄金龙女（上）" version="00039">301-400章</merge>
 	</merges>
 <single>
-</single>
+		<chapter file="00001" name="第三百一十六章 一个人的战队（中）">2013-12-12 07:07:28</chapter>
+	<chapter file="00002" name="第三百一十六章 一个人的战队（下）">2013-12-12 17:05:51</chapter>
+	<chapter file="00003" name="第三百一十七章 太阳沐浴、黄金龙女（上）">2013-12-13 08:32:45</chapter></single>
 </tangmen>
