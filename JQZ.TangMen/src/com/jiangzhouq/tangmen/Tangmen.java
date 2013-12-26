@@ -7,14 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.baidu.frontia.Frontia;
 import com.baidu.frontia.FrontiaFile;
@@ -27,8 +23,6 @@ import com.baidu.frontia.api.FrontiaStorageListener.FileTransferListener;
 import com.jiangzhouq.tangmen.data.Constants;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
-import com.umeng.update.UmengUpdateListener;
-import com.umeng.update.UpdateResponse;
 
 public class Tangmen extends FragmentActivity implements OnClickListener{
 	private static final boolean LOG_SWITCH = Constants.LOG_SWITCH;
@@ -66,6 +60,7 @@ public class Tangmen extends FragmentActivity implements OnClickListener{
 	    btn_total.setOnClickListener(this);
 	    RelativeLayout btn_settings = (RelativeLayout) findViewById(R.id.btn_settings);
 	    btn_settings.setOnClickListener(this);
+	    mCloudStorage = Frontia.getStorage();
 	}
 	@Override
 	protected void onResume() {
@@ -101,9 +96,9 @@ public class Tangmen extends FragmentActivity implements OnClickListener{
 					Log.d(LOG_TAG, "mTotalFile.size:" + mTotalFile.size());
 				if(mTotalFile.size() > 0){
 					for(int i =0; i < mTotalFile.size(); i++){
-//						if (LOG_SWITCH)
-//							Log.d(LOG_TAG, "Start to download RemotePath" + mTotalFile.get(i).getRemotePath() + " Native path:" + mTotalFile.get(i).getNativePath());
-						deleteFile(mTotalFile.get(i));
+						if (LOG_SWITCH)
+							Log.d(LOG_TAG, "Start to download RemotePath" + mTotalFile.get(i).getRemotePath() + " Native path:" + mTotalFile.get(i).getNativePath());
+						downloadFile(mTotalFile.get(i));
 					}
 					
 				}
@@ -175,6 +170,12 @@ public class Tangmen extends FragmentActivity implements OnClickListener{
 		switch(v.getId()){
 		case R.id.btn_settings:
 			startActivity(new Intent(this, SettingsActivity.class));
+			break;
+		case R.id.btn_month:
+			startActivity(new Intent(this, ThisMonthActivity.class));
+			break;
+		case R.id.btn_total:
+			list();
 			break;
 		}
 	}
