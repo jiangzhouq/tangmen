@@ -5,7 +5,7 @@ import sys
 reload(sys) 
 sys.setdefaultencoding('utf-8')
 import time
-import urllib2  
+import urllib2 
 import re  
 import os
 #import pymongo
@@ -63,8 +63,8 @@ def create_node(tag, property_map, content):
     element.text = content  
     return element  
 
-baseurl = 'http://www.biquge.com/0_2/'
-url0 = '700772.html'
+baseurl = 'http://www.66721.com/32/32879/'
+url0 = '6548404.html'
 name = 1
 
 #url0 = '3489544.html'
@@ -74,19 +74,23 @@ name = 1
 #db = client.tangmen
 #db.authenticate('jiangzhouq', 'biu1biu2biu3')
 
+
 while True:
-	find_re = re.compile(r'<h1>(.+?)</h1>.+?<div id="content">(.+?)</div>.+?目录</a> &rarr; <a href="(.+?)">下一章'.encode('gb2312'), re.DOTALL)
+	global str102
+	find_re = re.compile(r'<h1>(.+?)</h1>.+?<!--章节内容开始--><p data-plugin="keyword">(.+?)</p><!--章节内容结束-->.+?目录</a> &rarr; <a href="(.+?)">下一章'.encode('gb2312'), re.DOTALL)
 	url = baseurl + url0
 	html = urllib2.urlopen(url).read()  
-	for x in find_re.findall(html):  
+	for x in find_re.findall(html): 
 		str1 = x[0].decode('gb2312', 'ignore').encode('utf-8')
-		str101 = str1.replace('第一集','').replace('第二集','').replace('第三集','').replace('第四集','').replace('第五集','');
-		str102 = str101.replace('天梦冰蚕','',1).replace('怪物学院','').replace('武魂融合','').replace('黄金之路','').replace('冠军之战','').replace(' ','',2)
-		
+	#	str101 = str1.replace('第一集','').replace('第二集','').replace('第三集','').replace('第四集','').replace('第五集','');
+	#	str102 = str101.replace('天梦冰蚕','',1).replace('怪物学院','').replace('武魂融合','').replace('黄金之路','').replace('冠军之战','').replace(' ','',2)
+		str102 = str1.replace('正文 ','')
 		str2 = x[2].decode('gb2312', 'ignore').encode('utf-8')
 		url0 = str2
 		str3 = x[1].decode('gb2312', 'ignore').encode('utf-8')
-		print str102
+		str3 = str3.replace('<br />','')
+		str3 = str3.replace('&nbsp;','')
+		print str102 
 		print url0
 		print str3
 		print os.getcwd() + '/xiaoshuo/' + str(name).zfill(5) + '.txt'
@@ -97,15 +101,15 @@ while True:
 	f.close()
 
 	#1. 读取xml文件  
-	tree = read_xml("./test.xml")		
+	tree = read_xml(os.getcwd() + "/test.xml")		
 	#A. 找到父节点  
 	nodes = tree.getroot()
 	#A.新建节点  
-	a = create_node("chapter", {"file":str(name).zfill(5),"name":str102},str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())))  
+	a = create_node("chapter", {"file":str(name).zfill(5),"name":str102,"time":str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))},'')  
 	#B.插入到父节点之下  
 	add_child_node(nodes, a)
 	prettyXml(nodes, '\t', '\n')
-	write_xml(tree, "./test.xml")
+	write_xml(tree, os.getcwd() + "/test.xml")
 	
 	name = name + 1
 	print 'Done!'
