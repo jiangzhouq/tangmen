@@ -33,6 +33,7 @@ public class PageWidget extends View {
 	Bitmap mNextPageBitmap = null;
 
 	PointF mTouch = new PointF(); // 拖拽点
+	PointF mDownPoint = new PointF();// 按下的那个点
 	PointF mBezierStart1 = new PointF(); // 贝塞尔曲线起始点
 	PointF mBezierControl1 = new PointF(); // 贝塞尔曲线控制点
 	PointF mBeziervertex1 = new PointF(); // 贝塞尔曲线顶点
@@ -68,6 +69,7 @@ public class PageWidget extends View {
 	Paint mPaint;
 	Scroller mScroller;
 
+	private int directionSured = 0;
 	public PageWidget(Context context, int width, int height) {
 		super(context);
 		mPath0 = new Path();
@@ -119,9 +121,16 @@ public class PageWidget extends View {
 		if (event.getAction() == MotionEvent.ACTION_MOVE) {
 			mTouch.x = event.getX();
 			mTouch.y = event.getY();
+			if(directionSured == 0){
+				if(mTouch.x < mDownPoint.x){
+					directionSured = 1;
+				}
+			}
 			this.postInvalidate();
 		}
 		if (event.getAction() == MotionEvent.ACTION_DOWN) {
+			mDownPoint.x = event.getX();
+			mDownPoint.y = event.getY();
 			mTouch.x = event.getX();
 			mTouch.y = event.getY();
 			// calcCornerXY(mTouch.x, mTouch.y);
@@ -248,7 +257,7 @@ public class PageWidget extends View {
 		mBeziervertex2.y = (2 * mBezierControl2.y + mBezierStart2.y + mBezierEnd2.y) / 4;
 	}
 
-	private void drawCurrentPageArea(Canvas canvas, Bitmap bitmap, Path path) {
+	private void drawCurrentPageArea(Canvas canvas, Bitmap bitmap1,Bitmap bitmap2,  Path path) {
 		mPath0.reset();
 		mPath0.moveTo(mBezierStart1.x, mBezierStart1.y);
 		mPath0.quadTo(mBezierControl1.x, mBezierControl1.y, mBezierEnd1.x,
@@ -262,8 +271,14 @@ public class PageWidget extends View {
 		mPath0.close();
 
 		canvas.save();
-		canvas.clipPath(path, Region.Op.XOR);
-		canvas.drawBitmap(bitmap, 0, 0, null);
+//		canvas.clipPath(path, Region.Op.XOR);
+		canvas.drawBitmap(bitmap1, mTouch.x - mDownPoint.x, 0, null);
+		if(mCornerX > 0){
+			canvas.drawBitmap(bitmap2, mScreenWidth + mTouch.x - mDownPoint.x, 0, null);
+		}else{
+			canvas.drawBitmap(bitmap2,  mTouch.x - mDownPoint.x - mScreenWidth, 0, null);
+		}
+		
 		canvas.restore();
 	}
 
@@ -315,10 +330,10 @@ public class PageWidget extends View {
 	protected void onDraw(Canvas canvas) {
 		canvas.drawColor(0xFFAAAAAA);
 		calcPoints();
-		drawCurrentPageArea(canvas, mCurPageBitmap, mPath0);
-		drawNextPageAreaAndShadow(canvas, mNextPageBitmap);
-		drawCurrentPageShadow(canvas);
-		drawCurrentBackArea(canvas, mCurPageBitmap);
+		drawCurrentPageArea(canvas, mCurPageBitmap,mNextPageBitmap, mPath0);
+//		drawNextPageAreaAndShadow(canvas, mNextPageBitmap);
+//		drawCurrentPageShadow(canvas);
+//		drawCurrentBackArea(canvas, mCurPageBitmap);
 	}
 
 	/**
@@ -546,9 +561,9 @@ public class PageWidget extends View {
 		// dx 水平方向滑动的距离，负值会使滚动向左滚动
 		// dy 垂直方向滑动的距离，负值会使滚动向上滚动
 		if (mCornerX > 0) {
-			dx = -(int) (mScreenWidth + mTouch.x);
+			dx = -(int) (mScreenWidth + mTouch.x - mDownPoint.x);
 		} else {
-			dx = (int) (mScreenWidth - mTouch.x + mScreenWidth);
+			dx = (int) (mScreenWidth - mTouch.x + mDownPoint.x);
 		}
 		if (mCornerY > 0) {
 			dy = (int) (mScreenHeight - mTouch.y);
