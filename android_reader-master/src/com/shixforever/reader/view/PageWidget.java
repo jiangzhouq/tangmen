@@ -11,6 +11,7 @@ import android.graphics.Path;
 import android.graphics.PointF;
 import android.graphics.Region;
 import android.graphics.drawable.GradientDrawable;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Scroller;
@@ -121,10 +122,28 @@ public class PageWidget extends View {
 		if (event.getAction() == MotionEvent.ACTION_MOVE) {
 			mTouch.x = event.getX();
 			mTouch.y = event.getY();
-			if(directionSured == 0){
+			switch (directionSured) {
+			case 0:
 				if(mTouch.x < mDownPoint.x){
+					Log.d("111","directionSured = -1;");
+					directionSured = -1;
+				}else if( mTouch.x > mDownPoint.x){
+					Log.d("111","directionSured = 1;");
 					directionSured = 1;
 				}
+				break;
+			case 1:
+				if(mTouch.x < mDownPoint.x){
+					mTouch.x = mDownPoint.x;
+				}
+				break;
+			case -1:
+				if(mTouch.x > mDownPoint.x){
+					mTouch.x = mDownPoint.x;
+				}
+				break;
+			default:
+				break;
 			}
 			this.postInvalidate();
 		}
@@ -137,6 +156,7 @@ public class PageWidget extends View {
 			// this.postInvalidate();
 		}
 		if (event.getAction() == MotionEvent.ACTION_UP) {
+			directionSured = 0;
 			// if (canDragOver()) {
 			// startAnimation(1200);
 			// } else {
@@ -144,7 +164,7 @@ public class PageWidget extends View {
 			// mTouch.y = mCornerY - 10f;
 			// }
 			// 直接画出动画而不使用时上面的条件判断
-			startAnimation(1200);
+			startAnimation(300);
 			this.postInvalidate();
 		}
 		// return super.onTouchEvent(event);

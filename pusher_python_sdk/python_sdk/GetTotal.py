@@ -66,7 +66,6 @@ def create_node(tag, property_map, content):
 baseurl = 'http://www.66721.com/32/32879/'
 url0 = '6548404.html'
 name = 1
-
 #url0 = '3489544.html'
 #name = 1
 
@@ -77,6 +76,7 @@ name = 1
 
 while True:
 	global str102
+	str102 = ''
 	find_re = re.compile(r'<h1>(.+?)</h1>.+?<!--章节内容开始--><p data-plugin="keyword">(.+?)</p><!--章节内容结束-->.+?目录</a> &rarr; <a href="(.+?)">下一章'.encode('gb2312'), re.DOTALL)
 	url = baseurl + url0
 	html = urllib2.urlopen(url).read()  
@@ -95,9 +95,11 @@ while True:
 		print str3
 		print os.getcwd() + '/xiaoshuo/' + str(name).zfill(5) + '.txt'
 	if str102.count('第') == 0:
-			continue
+		continue
+	if str102.count('章') == 0:
+		continue
 	f = open(os.getcwd() + '/xiaoshuo/' + str(name).zfill(5) + '.txt','w')
-	f.write(str3)
+	f.write('\r' + str1 + '\r' + str3)
 	f.close()
 
 	#1. 读取xml文件  

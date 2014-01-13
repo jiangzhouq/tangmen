@@ -13,8 +13,8 @@ from Channel import *
 from pymongo import MongoClient
 import finaladd
  
-apiKey = '7q6l1grGD7pYFoDG3pEKTxwE'
-secretKey = 'tpTQFy3lK6mKG1yBVGH3lBitwUsfmjhY'
+api_key = '7q6l1grGD7pYFoDG3pEKTxwE'
+secret_key = 'tpTQFy3lK6mKG1yBVGH3lBitwUsfmjhY'
 user_id = '590753203017939367'
 channel_id = '3537340264275310445'
 
@@ -29,15 +29,15 @@ url = 'http://tieba.baidu.com/f/good?kw=%BE%F8%CA%C0%CC%C6%C3%C5&cid=0&tp=0&pn=0
 s = sched.scheduler(time.time,time.sleep)
 
 def test_pushMessage_to_tag():
-	c = Channel(apiKey, secretKey)
+	c = Channel(api_key, secret_key)
 	push_type = 2
 	optional = dict()
 	optional[Channel.TAG_NAME] = tagname
 	optional[Channel.MESSAGE_TYPE] = 1
-#	print 'hi:::::', push_type, message, message_key, optional
+	#   print 'hi:::::', push_type, message, message_key, optional
 	ret = c.pushMessage(push_type, message, message_key, optional)
-#	print 'Push Message.Detail:'
-#	print ret
+	#   print 'Push Message.Detail:'
+	#   print ret
 
 def perform():
 	find_re = re.compile(r'notStarList "><a href="(.+?)".+?class="j_th_tit">(.+?)</a><span >', re.DOTALL)  

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<jueshitangmen>
+	<merges>
+		<merge file="10001" num="1" status="全" version="00001">"001-100章"</merge>
+	<merge file="10002" num="2" status="全" version="00001">"101-200章"</merge>
+	<merge file="10003" num="3" status="全" version="00001">"201-300章"</merge>
+	<merge file="10004" num="4" status="更新至:第三百二十六章 阴云密布的局势（下）" version="00081">"301-400章"</merge>
+</merges>
+<single>
+		<chapter file="00001" name="第三百一十六章 一个人的战队（中）">"2013-12-12 07:07:28"</chapter>
+	<chapter file="00002" name="第三百一十六章 一个人的战队（下）">"2013-12-12 17:05:51"</chapter>
+	<chapter file="00003" name="第三百一十七章 太阳沐浴、黄金龙女（上）">"2013-12-13 08:32:45"</chapter>
+	<chapter file="00004" name="第三百一十七章 太阳沐浴、黄金龙女（中）">"2013-12-13 17:05:58"</chapter>
+	<chapter file="00005" name="第三百一十七章 太阳沐浴、黄金龙女（下）">"2013-12-14 12:44:33"</chapter>
+	<chapter file="00006" name="第三百一十八章 血脉纯正的蓝电霸王龙（上）">"2013-12-15 01:55:45"</chapter>
+	<chapter file="00007" name="第三百一十八章 血脉纯正的蓝电霸王龙（中）">"2013-12-15 07:05:53"</chapter>
+	<chapter file="00008" name="第三百一十八章 血脉纯正的蓝电霸王龙（下）">"2013-12-15 22:41:18"</chapter>
+	<chapter file="00009" name="第三百四十章 日月神针（下）">2014-01-13 18:06:42</chapter>
+	<chapter file="00010" name="第三百四十章 日月神针（中）">2014-01-13 18:06:44</chapter>
+	<chapter file="00011" name="第三百四十章 日月神针（上）">2014-01-13 18:06:48</chapter>
+	<chapter file="00012" name="第三百三十九章 大幕拉开（下）">2014-01-13 18:06:50</chapter>
+	<chapter file="00013" name="第三百三十九章 大幕拉开（上）">2014-01-13 18:07:18</chapter>
+	<chapter file="00014" name="第三百三十八章 橘子的提醒（下）">2014-01-13 18:07:20</chapter>
+	<chapter file="00015" name="第三百三十八章 橘子的提醒（中）">2014-01-13 18:07:22</chapter>
+	<chapter file="00016" name="第三百三十八章 橘子的提醒（上）">2014-01-13 18:07:24</chapter>
+	<chapter file="00017" name="第三百三十七章 紫金蝶龙变（下）">2014-01-13 18:07:26</chapter>
+	<chapter file="00018" name="第三百三十七章 紫金蝶龙变（中）">2014-01-13 18:07:29</chapter>
+	<chapter file="00019" name="第三百三十七章 紫金蝶龙变（上）">2014-01-13 18:07:32</chapter>
+	<chapter file="00020" name="第三百三十六章 冰雪二帝之骄傲">2014-01-13 18:07:34</chapter>
+	<chapter file="00021" name="第三百三十五章 紫金变身（下）">2014-01-13 18:07:36</chapter>
+	<chapter file="00022" name="第三百三十五章 紫金变身（中）">2014-01-13 18:07:38</chapter>
+	<chapter file="00023" name="第三百三十五章 紫金变身（上）">2014-01-13 18:07:42</chapter>
+	<chapter file="00024" name="第三百三十四章 唐门隐藏的战术（下）">2014-01-13 18:07:44</chapter>
+	<chapter file="00025" name="第三百三十四章 唐门隐藏的战术（中）补抽">2014-01-13 18:07:46</chapter>
+	<chapter file="00026" name="第三百三十四章 唐门隐藏的战术（上）">2014-01-13 18:07:49</chapter>
+	<chapter file="00027" name="第三百三十三章 四大邪魂师（下）">2014-01-13 18:07:51</chapter>
+	<chapter file="00028" name="第三百三十三章 四大邪魂师（中）">2014-01-13 18:07:54</chapter>
+	<chapter file="00029" name="第三百三十三章 四大邪魂师（上）">2014-01-13 18:07:56</chapter>
+	<chapter file="00030" name="第三百三十二章 小雅，我有点冷（下）">2014-01-13 18:07:59</chapter>
+	<chapter file="00031" name="第三百三十二章 小雅，我有点冷（中）">2014-01-13 18:08:02</chapter>
+	<chapter file="00032" name="第三百三十二章 小雅，我有点冷（上）">2014-01-13 18:08:04</chapter>
+	<chapter file="00033" name="第三百三十一章 龙皇震域界（中）">2014-01-13 18:08:18</chapter>
+	<chapter file="00034" name="第三百三十一章 龙皇震域界（上）">2014-01-13 18:08:22</chapter>
+	<chapter file="00035" name="第三百三十章 龙皇破邪裂（下）">2014-01-13 18:08:26</chapter>
+	<chapter file="00036" name="第三百三十章 龙皇破邪裂（中）">2014-01-13 18:08:31</chapter>
+	<chapter file="00037" name="第三百三十章 龙皇破邪裂（上）">2014-01-13 18:08:33</chapter>
+	<chapter file="00038" name="第三百二十九章 提前进行的决赛！">2014-01-13 18:08:36</chapter>
+	<chapter file="00039" name="第三百二十八章 双龙对决（下）">2014-01-13 18:08:39</chapter>
+	<chapter file="00040" name="第三百二十八章 双龙对决（中）">2014-01-13 18:08:41</chapter>
+	<chapter file="00041" name="第三百二十八章 双龙对决（上）">2014-01-13 18:08:45</chapter>
+	<chapter file="00042" name="第三百二十七章 半决赛！（下）">2014-01-13 18:08:49</chapter>
+	<chapter file="00043" name="第三百二十七章 半决赛！（中）">2014-01-13 18:08:51</chapter>
+	<chapter file="00044" name="第三百二十七章 半决赛！（上）">2014-01-13 18:08:54</chapter>
+	<chapter file="00045" name="第三百二十六章 阴云密布的局势（下）">2014-01-13 18:08:57</chapter></single>
+</jueshitangmen>
